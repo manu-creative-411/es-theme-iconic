@@ -1,0 +1,11 @@
+<theme>
+  <variables>
+    <systemName>emuconfig</systemName>
+    <systemDescription>Access all config for emulators</systemDescription>
+    <systemCoverSize>1-1</systemCoverSize>
+    <systemCartSize>1-1</systemCartSize>
+    <systemManufacturer>${i18n.various}</systemManufacturer>
+    <systemReleaseYear>${i18n.various}</systemReleaseYear>
+    <systemHardwareType>${i18n.various}</systemHardwareType>
+  </variables>
+</theme>

@@ -26,6 +26,8 @@ It displays a list of the games of the system being viewed.
       <fontSize>0.030333333333333</fontSize>
       <lines>15</lines>
       <alignment>left</alignment>
+      <scrollSound>./_inc/sounds/scroll.wav</scrollSound>
+
     </textlist>
   </view>
 </theme>

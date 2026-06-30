@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+  <formatVersion>7</formatVersion>
+  <include>./default.xml</include>
+  <view name="screen, system, basic, detailed, grid">
+    <helpsystem name="help">
+      <iconColor>${baseColor}</iconColor>
+			<iconColor>ffffffff</iconColor>
+      <iconA>./icons/snes/SNES_button_A.svg</iconA>
+      <iconB>./icons/snes/SNES_button_B.svg</iconB>
+      <iconX>./icons/snes/SNES_button_X.svg</iconX>
+      <iconY>./icons/snes/SNES_button_Y.svg</iconY>
+      <iconL>./icons/xbox/Xbox_Left_Bumper.svg</iconL>
+      <iconR>./icons/xbox/Xbox_Right_Bumper.svg</iconR>
+      <iconStart>./icons/xbox/Xbox_Menu_button.svg</iconStart>
+      <iconSelect>./icons/xbox/Xbox_Share_button.svg</iconSelect>
+      <iconUpDown>./icons/xbox/Xbox_D-Pad_UpDown.svg</iconUpDown>
+      <iconLeftRight>./icons/xbox/Xbox_D-Pad_LeftRight.svg</iconLeftRight>
+      <iconUpDownLeftRight>./icons/xbox/Xbox_D-Pad_UpDown.svg</iconUpDownLeftRight>
+    </helpsystem>
+  </view>
+</theme>

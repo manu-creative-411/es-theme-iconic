@@ -7,20 +7,20 @@
       <cornerSize>20 20</cornerSize>
     </menuBackground>
     <menuText name="menutitle">
-      <fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
-      <fontSize>0.034</fontSize>
+      <fontPath>./_inc/fonts/Raleway-SemiBold.ttf</fontPath>
+      <fontSize>0.041</fontSize>
       <color>${menuTitleColor}</color>
     </menuText>
     <menuGroup name="menugroup">
-      <fontPath>./_inc/fonts/Gilroy-Regular.ttf</fontPath>
+      <fontPath>./_inc/fonts/Raleway-SemiBold.ttf</fontPath>
       <fontSize>0.034</fontSize>
       <color>${menuGroupColor}</color>
       <separatorColor>${menuGroupSeparatorColor}</separatorColor>
       <backgroundColor>00000000</backgroundColor>
     </menuGroup>
     <menuText name="menutext">
-      <fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
-      <fontSize>0.032</fontSize>
+      <fontPath>./_inc/fonts/Raleway-Regular.ttf</fontPath>
+      <fontSize>0.03</fontSize>
       <color>${menuTextColor}</color>
       <separatorColor>${menuTextSeparatorColor}</separatorColor>
       <selectedColor>${menuSelectedColor}</selectedColor>

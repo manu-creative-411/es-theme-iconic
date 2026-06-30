@@ -21,6 +21,7 @@ It displays a grid of the boxart images of the games of the system being viewed.
       <autoLayout>3 3</autoLayout>
       <animateSelection>false</animateSelection>
       <centerSelection>false</centerSelection>
+      <scrollSound>./_inc/sounds/select.wav</scrollSound>
     </imagegrid>
     <gridtile name="default">
       <backgroundEdgeColor>101010</backgroundEdgeColor>

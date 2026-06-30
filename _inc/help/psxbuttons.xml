@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+  <formatVersion>7</formatVersion>
+  <include>./default.xml</include>
+  <view name="screen, system, basic, detailed, grid">
+    <helpsystem name="help">
+			<iconColor>ffffffff</iconColor>
+      <iconA>./icons/playstation/PlayStation_button_C.svg</iconA>
+      <iconB>./icons/playstation/PlayStation_button_X.svg</iconB>
+      <iconX>./icons/playstation/PlayStation_button_T.svg</iconX>
+      <iconY>./icons/playstation/PlayStation_button_S.svg</iconY>
+      <iconL>./icons/playstation/PlayStation_button_L1.svg</iconL>
+      <iconR>./icons/playstation/PlayStation_button_R1.svg</iconR>
+      <iconStart>./icons/playstation/PlayStation_button_Start.svg</iconStart>
+      <iconSelect>./icons/playstation/PlayStation_button_Select.svg</iconSelect>
+      <iconUpDown>./icons/playstation/PlayStation_UpDown_button.svg</iconUpDown>
+      <iconLeftRight>./icons/playstation/PlayStation_LeftRight_button.svg</iconLeftRight>
+      <iconUpDownLeftRight>./icons/playstation/PlayStation_UpDown_button.svg</iconUpDownLeftRight>
+    </helpsystem>
+  </view>
+</theme>

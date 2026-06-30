@@ -1,0 +1,14 @@
+<theme>
+  <variables>
+    <systemName>PC GAMES</systemName>
+    <systemDescription>Unified list for Steam, Epic/GOG (Heroic) and locally-installed PC games (Lutris/Wine)</systemDescription>
+    <systemManufacturer>Retrobox</systemManufacturer>
+    <systemReleaseYear>${i18n.various}</systemReleaseYear>
+    <systemHardwareType>${i18n.various}</systemHardwareType>
+    <systemCoverSize>${i18n.various}</systemCoverSize>
+    <systemCartSize>${i18n.various}</systemCartSize>
+  </variables>
+  <variables lang="es">
+    <systemDescription>Aquí tienes acceso a todos los juegos de PC instalados, en Steam, Heroic y Lutris</systemDescription>
+  </variables>
+</theme>

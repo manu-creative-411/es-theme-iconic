@@ -1,0 +1,14 @@
+<theme>
+  <variables>
+    <systemName>Apps</systemName>
+    <systemDescription>Run full-screen webapps to popular streaming services, as well as programs like Kodi</systemDescription>
+    <systemManufacturer>Retrobox</systemManufacturer>
+    <systemReleaseYear>${i18n.various}</systemReleaseYear>
+    <systemHardwareType>${i18n.various}</systemHardwareType>
+    <systemCoverSize>${i18n.various}</systemCoverSize>
+    <systemCartSize>${i18n.various}</systemCartSize>
+  </variables>
+  <variables lang="es">
+    <systemDescription>Ejecuta servicios web de streaming a pantalla completa, así como programas tipo Kodi</systemDescription>
+  </variables>
+</theme>

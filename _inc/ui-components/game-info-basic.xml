@@ -30,6 +30,8 @@ It only displays the system logo at the center.
       <padding>0.04 0 0.04 0</padding>
       <glowOffset>0 0</glowOffset>
       <fontPath>./_inc/fonts/ChangaOne-Italic.ttf</fontPath>
+      <fontSize>0.035</fontSize>
+      <fontSize>0.035</fontSize>
       <color>111111ff</color>
     </text>
   </view>

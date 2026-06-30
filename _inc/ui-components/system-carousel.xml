@@ -25,6 +25,7 @@ vertically on the left side of the screen.
       <maxLogoCount>${maxLogoCount}</maxLogoCount>
       <systemInfoDelay>0</systemInfoDelay>
       <defaultTransition>fade &amp; slide</defaultTransition>
+      <scrollSound>./_inc/sounds/quicksysselect.wav</scrollSound>
       <itemTemplate>
         <container>
           <image name="logo-image">
@@ -52,6 +53,8 @@ vertically on the left side of the screen.
             <padding>0.04 0 0.04 0</padding>
             <glowOffset>0 0</glowOffset>
             <fontPath>./_inc/fonts/ChangaOne-Italic.ttf</fontPath>
+      <fontSize>0.035</fontSize>
+      <fontSize>0.035</fontSize>
             <color>111111ff</color>
           </text>
         </container>

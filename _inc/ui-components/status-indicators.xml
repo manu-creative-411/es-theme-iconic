@@ -28,7 +28,7 @@ It should be visible from all views and z-rendered above the bottom bar.
     <stackpanel name="status-indicators" extra="true">
       <h>0.022</h>
       <w>1</w>
-      <pos>-0.0075 0.965</pos>
+      <pos>-0.0075 0.974</pos>
       <separator>0.012</separator>
       <zIndex>100</zIndex>
       <orientation>horizontal</orientation>

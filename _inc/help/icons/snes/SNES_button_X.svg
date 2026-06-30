@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="Capa_1"
+   x="0px"
+   y="0px"
+   width="20px"
+   height="20px"
+   viewBox="0 0 20 20"
+   enable-background="new 0 0 20 20"
+   xml:space="preserve"
+   sodipodi:docname="SNES_button_X.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs5" /><sodipodi:namedview
+   id="namedview5"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="45.254834"
+   inkscape:cx="3.6460193"
+   inkscape:cy="10.142563"
+   inkscape:window-width="1920"
+   inkscape:window-height="1052"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="g5"
+   showguides="true"><sodipodi:guide
+     position="0,10"
+     orientation="0,-1"
+     id="guide6"
+     inkscape:locked="false" /><sodipodi:guide
+     position="10,20"
+     orientation="1,0"
+     id="guide7"
+     inkscape:locked="false" /><sodipodi:guide
+     position="6.2859999,6.664"
+     orientation="1,0"
+     id="guide8"
+     inkscape:locked="false" /><sodipodi:guide
+     position="13.714,6.664"
+     orientation="1,0"
+     id="guide9"
+     inkscape:locked="false" /></sodipodi:namedview>
+<g
+   id="g5">
+	<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="10.0005"
+   y1="0"
+   x2="10.0005"
+   y2="17.9003">
+		<stop
+   offset="0"
+   style="stop-color:#0d00ba;stop-opacity:1;"
+   id="stop1" />
+		
+		<stop
+   offset="0.95792502"
+   style="stop-color:#09006a;stop-opacity:1;"
+   id="stop3" />
+		
+		
+	</linearGradient>
+	<circle
+   fill="url(#SVGID_1_)"
+   cx="10"
+   cy="10"
+   r="10"
+   id="circle5" />
+<path
+   d="m 6.2619998,14.308 2.94,-4.308 -2.796,-4.0920001 h 1.704 L 10.042,8.764 11.974,5.9079999 h 1.704 L 10.882,10 l 2.94,4.308 h -1.704 l -2.076,-3.06 -2.0760002,3.06 z"
+   id="text10"
+   style="font-weight:bold;font-family:Cabin;-inkscape-font-specification:'Cabin Bold';fill:#cccccc;stroke-width:0.5;paint-order:markers fill stroke"
+   aria-label="X" /></g>
+
+</svg>

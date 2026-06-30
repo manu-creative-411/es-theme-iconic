@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+  <formatVersion>7</formatVersion>
+  <include>./default.xml</include>
+  <view name="screen, system, basic, detailed, grid">
+    <helpsystem name="help">
+      <iconColor>${helpIconColor}</iconColor>
+
+      <iconA>./../icons/help-button-east.svg</iconA>
+      <iconB>./../icons/help-button-south.svg</iconB>
+      <iconX>./../icons/help-button-north.svg</iconX>
+      <iconY>./../icons/help-button-west.svg</iconY>
+
+      <!-- XBox layout
+      <iconA>./icons/buttons_south.svg</iconA>
+      <iconB>./icons/buttons_east.svg</iconB>
+      <iconX>./icons/buttons_west.svg</iconX>
+      <iconY>./icons/buttons_north.svg</iconY> -->
+    </helpsystem>
+  </view>
+</theme>

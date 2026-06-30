@@ -40,6 +40,8 @@ It displays a mixin of the game images, above the game metadata.
       <padding>0.04 0 0.04 0</padding>
       <glowOffset>0 0</glowOffset>
       <fontPath>./_inc/fonts/ChangaOne-Italic.ttf</fontPath>
+      <fontSize>0.035</fontSize>
+      <fontSize>0.035</fontSize>
       <color>111111ff</color>
     </text>
     <image name="md_image">
@@ -148,7 +150,7 @@ It displays a mixin of the game images, above the game metadata.
       <fontSize>0.024</fontSize>
       <pos>0.05 0.602</pos>
       <size>0.08 0.024</size>
-      <format>%Y-%m-%d</format>
+      <format>%Y</format>
       <alignment>left</alignment>
     </datetime>
     <text name="md_developer">

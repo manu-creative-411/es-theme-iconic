@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<view name="screen, system, basic, detailed, grid">
+		<helpsystem name="help">
+			<origin>0 0</origin>
+			<pos>0.01 0.974</pos>
+			<fontSize>0.02</fontSize>
+			<textColor>${helpTextColor}</textColor>
+			<iconColor>${helpIconColor}</iconColor>
+            <fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
+		</helpsystem>
+	</view>
+	<!--
+        The position is changed in "system" view to avoid overlapping with the system panel info
+        (only if the resolution is wide enough to allow it).
+    -->
+	<view name="system">
+		<helpsystem name="help" ifSubset="aspect-ratio:16-9|16-9-auto|16-10|16-10-auto">
+			<pos>0.48 0.974</pos>
+			<!-- Retrobat has more help text, and it would overlap with the hour. -->
+			<pos ifSubset="distribution:retrobat">0.01 0.974</pos>
+		</helpsystem>
+	</view>
+</theme>

@@ -23,6 +23,15 @@ Based on:   Iconic (ES-DE version) by Siddy212
     <include>./_inc/metadata/${system.theme}.xml</include>
     <!-- Built-in metadata override theme metadata when source is "EmulationStation". -->
     <include ifSubset="metadata-source:es">./_inc/metadata/_builtin.xml</include>
+    <include>./_inc/help/default.xml</include>
+    <include ifSubset="helpsystem:buttons">./_inc/help/buttons.xml</include>
+    <include ifSubset="helpsystem:xboxbuttons">./_inc/help/xboxbuttons.xml</include>
+    <include ifSubset="helpsystem:psxbuttons">./_inc/help/psxbuttons.xml</include>
+    <include ifSubset="helpsystem:snesbuttons">./_inc/help/snesbuttons.xml</include>
+    <include ifSubset="helpsystem:standard">./_inc/help/default.xml</include>
+    <include ifSubset="helpsystem:6buttons">./_inc/help/6buttons.xml</include>
+    <include ifSubset="helpsystem:8buttons">./_inc/help/8buttons.xml</include>
+
     <!--
         To reduce code repetition, views are split in multiple sub-components. Some views re-use
         the same components. Due to the nature of "<include>" implementation, it's unforunately not
@@ -64,6 +73,6 @@ Based on:   Iconic (ES-DE version) by Siddy212
     <include>./_inc/ui-components/gamelist-textlist.xml</include>
     <include>./_inc/ui-components/gamelist-grid.xml</include>
     <include>./_inc/ui-components/system-carousel.xml</include>
-    <include>./_inc/ui-components/help.xml</include>
     <include>./_inc/ui-components/menu.xml</include>
+
 </theme>

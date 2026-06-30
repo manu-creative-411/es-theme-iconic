@@ -46,6 +46,14 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Emulator</i18n.hardware-emulator>
     <i18n.hardware-os>OS</i18n.hardware-os>
     <i18n.hardware-port>Port</i18n.hardware-port>
+		<i18n.helpbuttons>Buttons position</i18n.helpbuttons>
+		<i18n.xboxbuttons>Xbox style</i18n.xboxbuttons>
+		<i18n.snesbuttons>SNES style</i18n.snesbuttons>
+		<i18n.psxbuttons>PlayStation Style</i18n.psxbuttons>
+		<i18n.buttons6>Arcade 6 buttons</i18n.buttons6>
+		<i18n.buttons8>Arcade 8 butttons</i18n.buttons8>
+		<i18n.helpSubsetName>Button labels style</i18n.helpSubsetName>
+
   </variables>
   <!-- Following variables will overwrite the default ones if the "lang" matches. -->
   <variables lang="ar">
@@ -232,6 +240,13 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Emulador</i18n.hardware-emulator>
     <i18n.hardware-os>Sistema operativo</i18n.hardware-os>
     <i18n.hardware-port>Puerto</i18n.hardware-port>
+		<i18n.helpbuttons>Posición de los botones</i18n.helpbuttons>
+		<i18n.xboxbuttons>Estilo Xbox 360</i18n.xboxbuttons>
+		<i18n.snesbuttons>Estilo Super Nintendo</i18n.snesbuttons>
+		<i18n.psxbuttons>Estilo PlayStation</i18n.psxbuttons>
+		<i18n.buttons6>Arcade 6 botones</i18n.buttons6>
+		<i18n.buttons8>Arcade 8 botones</i18n.buttons8>
+		<i18n.helpSubsetName>Estilo de los labels de los botones</i18n.helpSubsetName>
   </variables>
   <variables lang="fr">
     <systemDescription>Voir et jouer à ${system.fullName}.</systemDescription>
