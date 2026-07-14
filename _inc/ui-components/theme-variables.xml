@@ -38,13 +38,13 @@ here are then used by the UI components to adjust the appearance of the theme.
     <systemInfoSecondaryColor>a0a0a0</systemInfoSecondaryColor>
     <helpTextColor>999999</helpTextColor>
     <helpIconColor>999999</helpIconColor>
-    <menuBackgroundColor>151515</menuBackgroundColor>
+    <menuBackgroundColor>21212a</menuBackgroundColor>
     <menuTitleColor>cccccc</menuTitleColor>
     <menuGroupColor>cccccc</menuGroupColor>
     <menuTextColor>cccccc</menuTextColor>
     <menuFooterColor>a0a0a0</menuFooterColor>
     <menuSelectedColor>f0f0f0</menuSelectedColor>
-    <menuSelectorColor>444444</menuSelectorColor>
+    <menuSelectorColor>444450</menuSelectorColor>
     <menuTextSeparatorColor>44444430</menuTextSeparatorColor>
     <menuGroupSeparatorColor>444444</menuGroupSeparatorColor>
     <gamelistSelectorColor>444444</gamelistSelectorColor>
