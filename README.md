@@ -105,6 +105,10 @@ The first file found in this list (from highest to lowest precedence) is used:
 
 If none exists, the system name is displayed as text.
 
+### Full Grid View
+
+Besides the standard views, the theme provides a custom "Full Grid" view: a full-screen grid of boxart (7 columns by 2 rows at 16:9) with the system logo at the top center. The system background fades into the color of the selected color scheme (dark or light) at the top and bottom. To use it, select "Full Grid" in the gamelist view options of EmulationStation, either globally or per system.
+
 ## Acknowledgments
 
 Inspiration and templates were taken from the following themes:

@@ -5,7 +5,8 @@
 * Add translations of all the UI and the systems metadata in 18 languages (spanish translation by [Manu](https://github.com/manutortosa-collab)).
 * Add video previews to the game details page (when available).
 * Add option to enable loading logos from SVG files for sharper and scalable graphics (thanks [Manu](https://github.com/manutortosa-collab)).
-* Grid view: 2:3 tiles (SteamGridDB 600x900 boxart), the selected tile is no longer clipped, and a sliver of the previous/next row is shown at the top and bottom as a hint that there are more games.
+* Grid view: 2:3 tiles (SteamGridDB 600x900 boxart), the selected tile is no longer clipped, and a sliver of the previous/next row is shown at the top and bottom as a hint that there are more games (the grid extends down to 0.965, with a fade at the bottom).
+* Add the "Full Grid" view: full-screen grid with the system logo at the top center and the background fading into the color scheme at the top and bottom. Select it from the gamelist options.
 * Default transition between the system view and the game lists is now `fade` instead of `instant`.
 * Add the `Logo Region` option (Europe, USA, Japan) to load regional SVG logos (`<system>/<region>.svg`, `<system>/<scheme>-<region>.svg` or `<system>-<region>.svg`), with a fallback to other regions and to generic logos.
 * SVG logos can now have separate versions for each color scheme: when enabled, `_inc/logos-svg/<system>/light.svg` or `dark.svg` take precedence over `_inc/logos-svg/<system>.svg`, which in turn takes precedence over the bitmap logo.

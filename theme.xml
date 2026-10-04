@@ -62,6 +62,8 @@ Based on:   Iconic (ES-DE version) by Siddy212
                 - game-info-details.xml
                 - gamelist-grid.xml
                 - help.xml
+            - "full-grid" (custom view, inherits "grid"):
+                - gamelist-full-grid.xml (on top of the "grid" components)
             - "menu":
                 - menu.xml
     -->
@@ -72,6 +74,7 @@ Based on:   Iconic (ES-DE version) by Siddy212
     <include>./_inc/ui-components/game-info-details.xml</include>
     <include>./_inc/ui-components/gamelist-textlist.xml</include>
     <include>./_inc/ui-components/gamelist-grid.xml</include>
+    <include>./_inc/ui-components/gamelist-full-grid.xml</include>
     <include>./_inc/ui-components/system-carousel.xml</include>
     <include>./_inc/ui-components/menu.xml</include>
 

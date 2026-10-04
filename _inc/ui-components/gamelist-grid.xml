@@ -6,23 +6,37 @@ It displays a grid of the boxart images of the games of the system being viewed.
 <theme>
   <formatVersion>7</formatVersion>
   <view name="grid">
+    <!-- Fade over the bottom of the grid (and its next-row sliver), in the color of the color scheme. Only the right
+         half of the screen, with a soft left edge. -->
+    <image name="grid-fade-bottom" extra="true">
+      <path>./_inc/other/fade-bottom-right-${logoColorScheme}.png</path>
+      <origin>1 1</origin>
+      <pos>1 1</pos>
+      <size>0.5 0.18</size>
+      <zIndex>12</zIndex>
+      <linearSmooth>true</linearSmooth>
+    </image>
     <imagegrid name="gamegrid">
       <!-- Tiles are 2:3 (width/height), like SteamGridDB boxart (600x900). Rows are derived from it. -->
       <cellProportion>0.6667</cellProportion>
       <margin>0.015</margin>
       <!-- The grid is taller than its two full rows: the extra space (top and bottom padding) shows a sliver
-           of the previous/next row, as a visual hint that there are more games. -->
-      <pos>0.5 0</pos>
+           of the previous/next row, as a visual hint that there are more games. It extends down to 0.965. -->
+      <pos>0.495 0</pos>
       <size>0.5 0.965</size>
       <!-- left top right bottom, relative to the screen. Sides: must be larger than how far the zoomed selected tile
-           overflows its cell, or the grid clips it. Top/bottom: tile margin (0.015) + visible sliver of the adjacent row (0.033). -->
-      <padding>0.008 0.048 0.008 0.048</padding>
+           overflows its cell, or the grid clips it. Top: tile margin (0.015) + sliver of the previous row (0.033).
+           Bottom: tile margin (0.015) + sliver of the next row (0.081). With pos/size above, these paddings keep
+           the tiles 2:3 (0.144 = 0.048 + 0.096 of vertical padding in total). -->
+      <padding>0.011 0.048 0.011 0.096</padding>
       <imageSource>thumbnail </imageSource>
       <scrollbarColor>${gamelistSecondaryColor}</scrollbarColor>
       <scrollbarCorner>0.49</scrollbarCorner>
       <scrollbarSize>0.005</scrollbarSize>
       <scrollbarAlignment>right</scrollbarAlignment>
-      <autoLayoutSelectedZoom>1.05</autoLayoutSelectedZoom>
+      <!-- Selected tile zoom (shared with "full-grid"). Side padding must stay larger than the overflow it causes
+           (zoom - 1) / 2 * tile width, or the grid clips the selected tile in the first/last column. -->
+      <autoLayoutSelectedZoom>1.15</autoLayoutSelectedZoom>
       <zIndex>11</zIndex>
       <autoLayout>3 0</autoLayout>
       <animateSelection>false</animateSelection>
@@ -36,7 +50,8 @@ It displays a grid of the boxart images of the games of the system being viewed.
       <selectionMode>image</selectionMode>
       <imageSizeMode>maxSize</imageSizeMode>
       <padding>3 3</padding>
-      <imageColor>FFFFFF50</imageColor>
+      <!-- Inactive tiles: the boxart tinted 10% darker (E6 = 90% of FF), fully opaque, in both color schemes. -->
+      <imageColor>9F9F9FFF</imageColor>
     </gridtile>
     <gridtile name="selected">
       <backgroundCenterColor>00000000</backgroundCenterColor>

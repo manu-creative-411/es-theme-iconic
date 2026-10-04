@@ -1,0 +1,72 @@
+<!-- This component defines the "full-grid" custom view.
+
+It is a full-screen variant of the "grid" view: the system logo is displayed at the top center, the whole
+screen is a grid of the games boxart, and the (system-specific) background fades into the color of the
+selected color scheme at the top and at the bottom.
+
+It inherits from "grid" (background, status indicators, help, grid tiles...), so only the differences
+are defined here. The game details panel and metadata are hidden. The view can be selected from the
+EmulationStation gamelist options, globally or per system.
+-->
+<theme>
+  <formatVersion>7</formatVersion>
+  <customView name="full-grid" inherits="grid" displayName="Full Grid">
+    <!-- Fades: above the grid (so the previous/next row slivers fade out too), below the logo. -->
+    <image name="full-grid-fade-top" extra="true">
+      <path>./_inc/other/fade-top-${logoColorScheme}.png</path>
+      <origin>0 0</origin>
+      <pos>0 0</pos>
+      <size>1 0.19</size>
+      <zIndex>12</zIndex>
+      <linearSmooth>true</linearSmooth>
+    </image>
+    <image name="full-grid-fade-bottom" extra="true">
+      <path>./_inc/other/fade-bottom-${logoColorScheme}.png</path>
+      <origin>0 1</origin>
+      <pos>0 1</pos>
+      <size>1 0.18</size>
+      <zIndex>12</zIndex>
+      <linearSmooth>true</linearSmooth>
+    </image>
+    <!-- The grid is full-screen. 7 columns x 2 rows of 2:3 tiles (SteamGridDB boxart) at 16:9.
+         Padding (left top right bottom, relative to the screen): the top one leaves room for the logo, the top
+         and bottom ones also include the tile margin (0.015) plus a sliver of the previous row (0.033) and of the
+         next row (0.076, the grid extends down to 0.965). -->
+    <imagegrid name="gamegrid">
+      <pos>0.01 0</pos>
+      <size>0.98 0.965</size>
+      <autoLayout>7 2</autoLayout>
+      <padding>0.011 0.178 0.011 0.091</padding>
+    </imagegrid>
+    <!-- System logo, top center. -->
+    <image name="logo">
+      <pos>0.5 0.07</pos>
+      <origin>0.5 0.5</origin>
+      <maxSize>0.22 0.105</maxSize>
+      <zIndex>13</zIndex>
+    </image>
+    <text name="logoText">
+      <pos>0.5 0.07</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.3 0.105</size>
+      <zIndex>13</zIndex>
+    </text>
+    <!-- Hide the half-screen bottom fade (this view has its own full-width fades) the left panel and the game metadata inherited from "grid". -->
+    <image name="grid-fade-bottom" extra="true"><visible>false</visible></image>
+    <image name="game-details-panel" extra="true"><visible>false</visible></image>
+    <image name="md_image"><visible>false</visible></image>
+    <video name="md_video"><visible>false</visible></video>
+    <image name="md_thumbnail"><visible>false</visible></image>
+    <image name="md_marquee"><visible>false</visible></image>
+    <text name="md_name"><visible>false</visible></text>
+    <rating name="md_rating"><visible>false</visible></rating>
+    <text name="md_genre"><visible>false</visible></text>
+    <datetime name="md_releasedate"><visible>false</visible></datetime>
+    <text name="md_developer"><visible>false</visible></text>
+    <datetime name="md_lastplayed"><visible>false</visible></datetime>
+    <text name="md_players"><visible>false</visible></text>
+    <text name="md_publisher"><visible>false</visible></text>
+    <text name="md_gametime"><visible>false</visible></text>
+    <text name="md_description"><visible>false</visible></text>
+  </customView>
+</theme>
