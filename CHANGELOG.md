@@ -5,6 +5,7 @@
 * Add translations of all the UI and the systems metadata in 18 languages (spanish translation by [Manu](https://github.com/manutortosa-collab)).
 * Add video previews to the game details page (when available).
 * Add option to enable loading logos from SVG files for sharper and scalable graphics (thanks [Manu](https://github.com/manutortosa-collab)).
+* SVG logos can now have separate versions for each color scheme: when enabled, `_inc/logos-svg/<system>/light.svg` or `dark.svg` take precedence over `_inc/logos-svg/<system>.svg`, which in turn takes precedence over the bitmap logo.
 * Add controllers status icons in carrousel (thanks [Manu](https://github.com/manutortosa-collab)).
 * Simplfy the customization of theme backgrounds (thanks [Manu](https://github.com/manutortosa-collab)).
 * Fix automatic collections not dynamically populating the games list (thanks [Manu](https://github.com/manutortosa-collab)).

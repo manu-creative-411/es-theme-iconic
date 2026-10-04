@@ -10,6 +10,7 @@ It only displays the system logo at the center.
       <linearSmooth>true</linearSmooth>
       <path>./_inc/logos/${system.theme}.webp</path>
       <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}.svg</path>
+      <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}/${logoColorScheme}.svg</path>
       <zIndex>11</zIndex>
       <visible>true</visible>
       <pos>0.27 0.5</pos>

@@ -28,6 +28,7 @@ here are then used by the UI components to adjust the appearance of the theme.
   </variables>
   <!-- Config: Color Scheme. -->
   <variables ifSubset="color-scheme:dark">
+    <logoColorScheme>dark</logoColorScheme>
     <bottomBarImage>bottom-bar-dark.png</bottomBarImage>
     <backgroudOverlayImage>overlay-dark.png</backgroudOverlayImage>
     <systemInfoPanelImage>system-info-panel-dark.png</systemInfoPanelImage>
@@ -55,6 +56,7 @@ here are then used by the UI components to adjust the appearance of the theme.
     <gamelistGridTitleColor>BBBBBB</gamelistGridTitleColor>
   </variables>
   <variables ifSubset="color-scheme:light">
+    <logoColorScheme>light</logoColorScheme>
     <bottomBarImage>bottom-bar-light.png</bottomBarImage>
     <backgroudOverlayImage>overlay-light.png</backgroudOverlayImage>
     <systemInfoPanelImage>system-info-panel-light.png</systemInfoPanelImage>

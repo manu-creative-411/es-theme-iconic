@@ -48,16 +48,34 @@ def _base_dir() -> Path:
     return Path(__file__).parent.parent
 
 
+# Folders where each system may also have its own subfolder (<system>/light.svg, <system>/dark.svg).
+_FOLDERS_WITH_SYSTEM_SUBDIRS = {"logos-svg"}
+_SYSTEM_SUBDIR_FILES = {"light.svg", "dark.svg"}
+
+
 def _iter_files(folder_type: str):
     dir = _base_dir() / "_inc" / folder_type
     if not dir.exists():
         raise ValueError(f"Invalid folder: {folder_type}")
     for node in dir.iterdir():
-        if not node.is_file():
-            raise ValueError(f"Found unexpected non-file: {node}")
         if node.name.startswith("_"):
             continue
+        if node.is_dir() and folder_type in _FOLDERS_WITH_SYSTEM_SUBDIRS:
+            for child in node.iterdir():
+                if not child.is_file():
+                    raise ValueError(f"Found unexpected non-file: {child}")
+                yield child
+            continue
+        if not node.is_file():
+            raise ValueError(f"Found unexpected non-file: {node}")
         yield node
+
+
+def _system_of(file: Path) -> str:
+    """Return the system a file belongs to (its stem, or its parent folder for <system>/light.svg)."""
+    if file.stem in {"light", "dark"} and file.parent.parent.name == "logos-svg":
+        return file.parent.name
+    return file.stem
 
 
 def _find_files(ext: str):
@@ -369,8 +387,10 @@ def check_all_images_have_system():
 
     for dir in ["backgrounds", "overlays", "logos", "controllers", "logos-svg"]:
         for f in _iter_files(dir):
-            if f.stem not in systems:
+            if _system_of(f) not in systems:
                 yield Failure(f, "No associated system metadata")
+            elif f.parent.parent.name == "logos-svg" and f.name not in _SYSTEM_SUBDIR_FILES:
+                yield Failure(f, "Expected light.svg or dark.svg inside a system logo folder")
             else:
                 yield Success(f)
 
