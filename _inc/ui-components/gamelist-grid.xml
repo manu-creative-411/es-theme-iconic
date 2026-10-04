@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <!-- This component defines the right half of the screen in "grid" view.
 
 It displays a grid of the boxart images of the games of the system being viewed.
@@ -6,11 +7,16 @@ It displays a grid of the boxart images of the games of the system being viewed.
   <formatVersion>7</formatVersion>
   <view name="grid">
     <imagegrid name="gamegrid">
-      <cellProportion>1</cellProportion>
+      <!-- Tiles are 2:3 (width/height), like SteamGridDB boxart (600x900). Rows are derived from it. -->
+      <cellProportion>0.6667</cellProportion>
       <margin>0.015</margin>
-      <pos>0.5 0.05</pos>
-      <size>0.5 0.85</size>
-      <padding>7 7 7 7</padding>
+      <!-- The grid is taller than its two full rows: the extra space (top and bottom padding) shows a sliver
+           of the previous/next row, as a visual hint that there are more games. -->
+      <pos>0.5 0</pos>
+      <size>0.5 0.965</size>
+      <!-- left top right bottom, relative to the screen. Sides: must be larger than how far the zoomed selected tile
+           overflows its cell, or the grid clips it. Top/bottom: tile margin (0.015) + visible sliver of the adjacent row (0.033). -->
+      <padding>0.008 0.048 0.008 0.048</padding>
       <imageSource>thumbnail </imageSource>
       <scrollbarColor>${gamelistSecondaryColor}</scrollbarColor>
       <scrollbarCorner>0.49</scrollbarCorner>
@@ -18,7 +24,7 @@ It displays a grid of the boxart images of the games of the system being viewed.
       <scrollbarAlignment>right</scrollbarAlignment>
       <autoLayoutSelectedZoom>1.05</autoLayoutSelectedZoom>
       <zIndex>11</zIndex>
-      <autoLayout>3 3</autoLayout>
+      <autoLayout>3 0</autoLayout>
       <animateSelection>false</animateSelection>
       <centerSelection>false</centerSelection>
       <scrollSound>./_inc/sounds/select.wav</scrollSound>
