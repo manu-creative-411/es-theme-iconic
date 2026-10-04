@@ -40,8 +40,9 @@ The following options can be changed directly from the main menu under `User Int
 | Show Game Titles in Grid | Toggles the display of game titles in the grid view. | `No`, `Yes` |
 | Metadata Source | Selects the primary source of metadata (name, release year, etc.) to associate with each systems. | `Theme`, `EmulationStation` |
 | Use Vector Graphics for Logos | Load system logos as SVG for sharper and scalable graphics. It may require slightly more computing resources and produce artefacts. For each system, `_inc/logos-svg/<system>/light.svg` or `dark.svg` (matching the color scheme) is used first, then `_inc/logos-svg/<system>.svg`, then the bitmap logo. | `No`, `Yes` |
+| Logo Region | Selects the regional variant of the logos when using vector graphics (see below). | `Europe`, `USA`, `Japan` |
 | Smooth Resize | Toggles the use of smooth resizing for images. Disabling this may lead to better looking images, but it requires the VRAM optimizations to be disabled in the settings as well. | `Yes`, `No` |
-| Distribution | Used to define which folder to look in for theme customization files (see below). | `None`, `Batocera/Knulli`, `RetroBat`, `ROCKNIX` |
+| Distribution | Used to define which folder to look in for theme customization files (see below). | `None`, `Batocera/Knulli`, `RetroBat`, `ROCKNIX`, `Retrobox` |
 
 ## Customization
 
@@ -49,11 +50,12 @@ This theme allows customizations to artwork without the need to edit the source 
 
 ### Start Here
 
-- Make sure the `Distribution` setting is set to the correct value for your current OS (e.g. Batocera/Knulli, RetroBat or RockNIX)
+- Make sure the `Distribution` setting is set to the correct value for your current OS (e.g. Batocera/Knulli, RetroBat, RockNIX or Retrobox)
 - This value determines the folder where you will add your customizations:
     - Batocera/Knulli = `/userdata/theme-customizations/iconic/`
     - RockNIX = `/roms/_userdata/theme-customizations/iconic/`
     - Retrobat = `C:\RetroBat\emulationstation\.emulationstation\theme-customizations\iconic\`
+    - Retrobox = `~/.emulationstation/theme-customizations/iconic/`
 - Create the folders that match your distribution.
 - Within the `iconic` folder, create two additional subfolders named `backgrounds` and `overlays`.
 
@@ -80,6 +82,28 @@ Custom overlays can be added to help make images pop.
     - `${system.theme}.png`
 * As above, the `${system.theme}` variable corresponds to the system you are looking to override. This also applies to the transparent default overlay.
 * If a given system image is not found, then it will automatically fallback to a fully transparent overlay (if a custom background is present).
+
+### Regional and Light/Dark Logos
+
+When `Use Vector Graphics for Logos` is enabled, the logo of each system is looked up in `_inc/logos-svg/`. A system can have a folder `_inc/logos-svg/<system>/` with any of these files:
+
+* `<scheme>-<region>.svg` (e.g. `dark-jp.svg`): for that color scheme and region only.
+* `<region>.svg` (e.g. `us.svg`): for that region, in both light and dark.
+* `<scheme>.svg` (e.g. `dark.svg`): for that color scheme, in any region.
+
+`<scheme>` is `light` or `dark` according to the `Color Scheme` setting, and `<region>` is `eu`, `us` or `jp` according to the `Logo Region` setting (`eu` by default).
+
+The first file found in this list (from highest to lowest precedence) is used:
+
+1. `<system>/<scheme>-<region>.svg`
+2. `<system>/<region>.svg`
+3. `<system>/<scheme>.svg`
+4. For the other regions, in the order `eu`, `us`, `jp`: `<system>/<scheme>-<other>.svg`, then `<system>/<other>.svg`
+5. `<system>-<region>.svg`
+6. `<system>.svg`
+7. The bitmap logo in `_inc/logos/<system>.webp`
+
+If none exists, the system name is displayed as text.
 
 ## Acknowledgments
 

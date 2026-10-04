@@ -50,7 +50,11 @@ def _base_dir() -> Path:
 
 # Folders where each system may also have its own subfolder (<system>/light.svg, <system>/dark.svg).
 _FOLDERS_WITH_SYSTEM_SUBDIRS = {"logos-svg"}
-_SYSTEM_SUBDIR_FILES = {"light.svg", "dark.svg"}
+_LOGO_REGIONS = ("eu", "us", "jp")
+# Valid names inside a system logo folder: light.svg, dark.svg, us.svg, light-eu.svg, dark-jp.svg, ...
+_SYSTEM_SUBDIR_FILE_RE = re.compile(
+    rf"((light|dark)(-({'|'.join(_LOGO_REGIONS)}))?|({'|'.join(_LOGO_REGIONS)}))\.svg"
+)
 
 
 def _iter_files(folder_type: str):
@@ -71,10 +75,18 @@ def _iter_files(folder_type: str):
         yield node
 
 
-def _system_of(file: Path) -> str:
-    """Return the system a file belongs to (its stem, or its parent folder for <system>/light.svg)."""
-    if file.stem in {"light", "dark"} and file.parent.parent.name == "logos-svg":
+def _system_of(file: Path, systems: set[str]) -> str:
+    """Return the system a file belongs to.
+
+    Handles <system>.ext, <system>-<region>.svg and <system>/<scheme>[-<region>].svg.
+    """
+    if file.parent.parent.name == "logos-svg":
         return file.parent.name
+    if file.stem in systems:
+        return file.stem
+    for region in _LOGO_REGIONS:
+        if file.parent.name == "logos-svg" and file.stem.endswith(f"-{region}"):
+            return file.stem[: -len(region) - 1]
     return file.stem
 
 
@@ -387,10 +399,13 @@ def check_all_images_have_system():
 
     for dir in ["backgrounds", "overlays", "logos", "controllers", "logos-svg"]:
         for f in _iter_files(dir):
-            if _system_of(f) not in systems:
+            if _system_of(f, systems) not in systems:
                 yield Failure(f, "No associated system metadata")
-            elif f.parent.parent.name == "logos-svg" and f.name not in _SYSTEM_SUBDIR_FILES:
-                yield Failure(f, "Expected light.svg or dark.svg inside a system logo folder")
+            elif f.parent.parent.name == "logos-svg" and not _SYSTEM_SUBDIR_FILE_RE.fullmatch(f.name):
+                yield Failure(
+                    f,
+                    "Expected [light|dark][-]eu|us|jp.svg inside a system logo folder",
+                )
             else:
                 yield Success(f)
 

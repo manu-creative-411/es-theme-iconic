@@ -43,6 +43,11 @@ variables are derived from the values selected here and determine the appearance
     <include name="no" displayName="${i18n.no}"/>
     <include name="yes" displayName="${i18n.yes}"/>
   </subset>
+  <subset name="logo-region" displayName="${i18n.logo-region}">
+    <include name="eu" displayName="${i18n.europe}"/>
+    <include name="us" displayName="${i18n.usa}"/>
+    <include name="jp" displayName="${i18n.japan}"/>
+  </subset>
   <subset name="smooth-resize" displayName="${i18n.smooth-resize}">
     <include name="yes" displayName="${i18n.yes}"/>
     <include name="no" displayName="${i18n.no}"/>
@@ -52,6 +57,7 @@ variables are derived from the values selected here and determine the appearance
     <include name="batocera" displayName="Batocera/Knulli"/>
     <include name="retrobat" displayName="RetroBat"/>
     <include name="rocknix" displayName="ROCKNIX"/>
+    <include name="retrobox" displayName="Retrobox"/>
   </subset>
   <subset name="helpsystem" displayName="${i18n.helpSubsetName}">
 

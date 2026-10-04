@@ -10,8 +10,8 @@ listing the games of a system, the background is slightly desaturated.
       <zIndex>0</zIndex>
       <default>./_inc/backgrounds/_default.webp</default>
       <path>./_inc/backgrounds/${system.theme}.webp</path>
-      <path ifSubset="distribution:batocera|retrobat|rocknix">${themeCustomizationsPath}/backgrounds/${system.theme}.png</path>
-      <path ifSubset="distribution:batocera|retrobat|rocknix">${themeCustomizationsPath}/backgrounds/${system.theme}.webp</path>
+      <path ifSubset="distribution:batocera|retrobat|rocknix|retrobox">${themeCustomizationsPath}/backgrounds/${system.theme}.png</path>
+      <path ifSubset="distribution:batocera|retrobat|rocknix|retrobox">${themeCustomizationsPath}/backgrounds/${system.theme}.webp</path>
       <origin>0 0</origin>
       <size>${backgroundWidthScale} 1</size>
       <pos>${backgroundHorizontalPos} 0</pos>
@@ -37,7 +37,7 @@ listing the games of a system, the background is slightly desaturated.
       <linearSmooth>true</linearSmooth>
       <path>./_inc/overlays/${system.theme}.webp</path>
     </image>
-    <image ifSubset="distribution:batocera|retrobat|rocknix" name="background-art-overlay" extra="true">
+    <image ifSubset="distribution:batocera|retrobat|rocknix|retrobox" name="background-art-overlay" extra="true">
       <path if="exists(${themeCustomizationsPath} + '/backgrounds/' + ${system.theme} + '.png')">./_inc/other/fully-transparent-overlay.webp</path>
       <path if="exists(${themeCustomizationsPath} + '/backgrounds/' + ${system.theme} + '.webp')">./_inc/other/fully-transparent-overlay.webp</path>
       <path>${themeCustomizationsPath}/overlays/${system.theme}.png</path>

@@ -18,8 +18,8 @@
 	<view name="system">
 		<helpsystem name="help" ifSubset="aspect-ratio:16-9|16-9-auto|16-10|16-10-auto">
 			<pos>0.48 0.974</pos>
-			<!-- Retrobat has more help text, and it would overlap with the hour. -->
-			<pos ifSubset="distribution:retrobat">0.01 0.974</pos>
+			<!-- Retrobat and Retrobox have more help text, and it would overlap with the hour. -->
+			<pos ifSubset="distribution:retrobat|retrobox">0.01 0.974</pos>
 		</helpsystem>
 	</view>
 </theme>

@@ -15,11 +15,18 @@ here are then used by the UI components to adjust the appearance of the theme.
     <showGameTitlesInGrid ifSubset="show-game-titles-in-grid:yes">true</showGameTitlesInGrid>
     <showGameTitlesInGrid ifSubset="show-game-titles-in-grid:no">false</showGameTitlesInGrid>
   </variables>
+  <!-- Config: Logo Region. -->
+  <variables>
+    <logoRegion ifSubset="logo-region:eu">eu</logoRegion>
+    <logoRegion ifSubset="logo-region:us">us</logoRegion>
+    <logoRegion ifSubset="logo-region:jp">jp</logoRegion>
+  </variables>
   <!-- Config: Distribution. -->
   <variables>
     <themeCustomizationsPath ifSubset="distribution:retrobat">~/.emulationstation/theme-customizations/iconic</themeCustomizationsPath>
     <themeCustomizationsPath ifSubset="distribution:rocknix">/opt/roms/_userdata/theme-customizations/iconic</themeCustomizationsPath>
     <themeCustomizationsPath ifSubset="distribution:batocera">/userdata/theme-customizations/iconic</themeCustomizationsPath>
+    <themeCustomizationsPath ifSubset="distribution:retrobox">~/.emulationstation/theme-customizations/iconic</themeCustomizationsPath>
   </variables>
   <!-- Config: Smooth Resize. -->
   <variables>

@@ -9,7 +9,16 @@ vertically on the left side of the screen.
     <image name="logo">
       <path>./_inc/logos/${system.theme}.webp</path>
       <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}.svg</path>
+      <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}-${logoRegion}.svg</path>
+      <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}/jp.svg</path>
+      <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}/${logoColorScheme}-jp.svg</path>
+      <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}/us.svg</path>
+      <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}/${logoColorScheme}-us.svg</path>
+      <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}/eu.svg</path>
+      <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}/${logoColorScheme}-eu.svg</path>
       <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}/${logoColorScheme}.svg</path>
+      <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}/${logoRegion}.svg</path>
+      <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
     </image>
     <carousel name="systemcarousel">
       <type>horizontal</type>
@@ -38,7 +47,7 @@ vertically on the left side of the screen.
           </image>
           <text name="logo-text-fallback">
             <visible ifSubset="use-svg-logos:no">!exists("${themePath}/_inc/logos/" + {system:theme} + ".webp")</visible>
-            <visible ifSubset="use-svg-logos:yes">firstfile("${themePath}/_inc/logos/" + {system:theme} + ".webp", "${themePath}/_inc/logos-svg/" + {system:theme} + ".svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}.svg") == ""</visible>
+            <visible ifSubset="use-svg-logos:yes">firstfile("${themePath}/_inc/logos/" + {system:theme} + ".webp", "${themePath}/_inc/logos-svg/" + {system:theme} + ".svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "-${logoRegion}.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/jp.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}-jp.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/us.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}-us.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/eu.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}-eu.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoRegion}.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}-${logoRegion}.svg") == ""</visible>
             <value>{system:fullName}</value>
             <forceUppercase>true</forceUppercase>
             <lineSpacing>1</lineSpacing>
