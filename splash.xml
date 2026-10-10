@@ -4,39 +4,54 @@
     <!-- We do not re-use "theme-variables.xml" because it generates "ERROR" logs (although it works). -->
     <variables ifSubset="color-scheme:dark">
         <backgroudOverlayImage>overlay-dark.png</backgroudOverlayImage>
+        <logoColorScheme>dark</logoColorScheme>
+        <splashBottomBar>bottom-bar-dark.png</splashBottomBar>
         <splashProgressbarColor>E0E0E0</splashProgressbarColor>
     </variables>
     <variables ifSubset="color-scheme:light">
         <backgroudOverlayImage>overlay-light.png</backgroudOverlayImage>
+        <logoColorScheme>light</logoColorScheme>
+        <splashBottomBar>bottom-bar-light.png</splashBottomBar>
         <splashProgressbarColor>444444</splashProgressbarColor>
     </variables>
-    <!-- Branding name used to find _inc/splash/<distro>.svg|png. "none" keeps the default splash background. -->
+    <!-- Distribution branding: _inc/splash/<distro>-<light|dark>.svg|png, then _inc/splash/<distro>.svg|png.
+         The most specific file that exists is used; if none does, _default.png is used.
+         Distributions with branding also drop the color-scheme dim overlay and show the bottom fade instead. -->
     <variables ifSubset="distribution:none">
-        <splashDistro>none</splashDistro>
+        <splashDistro>disabled</splashDistro>
+        <splashBottomBar>fully-transparent-overlay.webp</splashBottomBar>
     </variables>
     <variables ifSubset="distribution:batocera">
         <splashDistro>batocera</splashDistro>
+        <backgroudOverlayImage>fully-transparent-overlay.webp</backgroudOverlayImage>
     </variables>
     <variables ifSubset="distribution:knulli">
         <splashDistro>knulli</splashDistro>
+        <backgroudOverlayImage>fully-transparent-overlay.webp</backgroudOverlayImage>
     </variables>
     <variables ifSubset="distribution:retrobat">
         <splashDistro>retrobat</splashDistro>
+        <backgroudOverlayImage>fully-transparent-overlay.webp</backgroudOverlayImage>
     </variables>
     <variables ifSubset="distribution:retrobox">
         <splashDistro>retrobox</splashDistro>
+        <backgroudOverlayImage>fully-transparent-overlay.webp</backgroudOverlayImage>
     </variables>
     <variables ifSubset="distribution:rocknix">
         <splashDistro>rocknix</splashDistro>
+        <backgroudOverlayImage>fully-transparent-overlay.webp</backgroudOverlayImage>
     </variables>
     <variables ifSubset="distribution:recalbox">
         <splashDistro>recalbox</splashDistro>
+        <backgroudOverlayImage>fully-transparent-overlay.webp</backgroudOverlayImage>
     </variables>
     <variables ifSubset="distribution:retropie">
         <splashDistro>retropie</splashDistro>
+        <backgroudOverlayImage>fully-transparent-overlay.webp</backgroudOverlayImage>
     </variables>
     <variables ifSubset="distribution:emuelec">
         <splashDistro>emuelec</splashDistro>
+        <backgroudOverlayImage>fully-transparent-overlay.webp</backgroudOverlayImage>
     </variables>
     <view name="splash">
         <splash name="splash">
@@ -48,9 +63,12 @@
             <minSize>1 1</minSize>
             <linearSmooth>true</linearSmooth>
             <saturation>0.75</saturation>
-            <path if="exists('./_inc/splash/' + ${splashDistro} + '.svg')">./_inc/splash/${splashDistro}.svg</path>
-            <path if="exists('./_inc/splash/' + ${splashDistro} + '.png')">./_inc/splash/${splashDistro}.png</path>
-            <path>./_inc/other/splash-background.png</path>
+            <!-- ES keeps the LAST <path> that exists, so list them from lowest to highest priority. -->
+            <path>./_inc/splash/_default.png</path>
+            <path>./_inc/splash/${splashDistro}.png</path>
+            <path>./_inc/splash/${splashDistro}.svg</path>
+            <path>./_inc/splash/${splashDistro}-${logoColorScheme}.png</path>
+            <path>./_inc/splash/${splashDistro}-${logoColorScheme}.svg</path>
         </image>
         <image name="background-art-overlay" extra="true">
             <path>./_inc/other/${backgroudOverlayImage}</path>
@@ -58,10 +76,20 @@
             <size>1 1</size>
             <zIndex>5</zIndex>
         </image>
+        <image name="bottom-bar" extra="true">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <path>./_inc/other/${splashBottomBar}</path>
+            <zIndex>6</zIndex>
+            <linearSmooth>true</linearSmooth>
+        </image>
+        <!-- Progress bar: origin is its left-middle point; pos x = (1 - width) / 2 centers it horizontally. -->
         <image name="progressbar">
             <origin>0 0.5</origin>
-            <pos>0.35 0.5</pos>
-            <size>0.3 0.005</size>
+            <pos>0.3 0.95</pos>
+            <size>0.4 0.025</size>
+            <zIndex>10</zIndex>
             <color>${splashProgressbarColor}30</color>
             <colorEnd>${splashProgressbarColor}30</colorEnd>
         </image>
@@ -71,7 +99,8 @@
         </image>
         <text name="label">
             <origin>0.5 0.5</origin>
-            <pos>0.5 0.6</pos>
+            <pos>0.5 0.9</pos>
+            <zIndex>10</zIndex>
             <alignment>center</alignment>
             <fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
             <fontSize>0.04</fontSize>
