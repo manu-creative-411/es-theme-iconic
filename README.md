@@ -42,7 +42,7 @@ The following options can be changed directly from the main menu under `User Int
 | Use Vector Graphics for Logos | Load system logos as SVG for sharper and scalable graphics. It may require slightly more computing resources and produce artefacts. For each system, `_inc/logos-svg/<system>/light.svg` or `dark.svg` (matching the color scheme) is used first, then `_inc/logos-svg/<system>.svg`, then the bitmap logo. | `No`, `Yes` |
 | Logo Region | Selects the regional variant of the logos when using vector graphics (see below). | `Europe`, `USA`, `Japan` |
 | Smooth Resize | Toggles the use of smooth resizing for images. Disabling this may lead to better looking images, but it requires the VRAM optimizations to be disabled in the settings as well. | `Yes`, `No` |
-| Distribution | Used to define which folder to look in for theme customization files (see below). | `None`, `Batocera/Knulli`, `RetroBat`, `ROCKNIX`, `Retrobox` |
+| Distribution | Used to define which folder to look in for theme customization files (see below) and which splash screen branding to load from `_inc/splash/<distribution>.svg` or `.png`. | `None`, `Batocera`, `Knulli`, `RetroBat`, `ROCKNIX`, `Retrobox`, `Recalbox`, `RetroPie`, `EmuELEC` |
 
 ## Customization
 

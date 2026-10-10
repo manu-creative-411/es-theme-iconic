@@ -11,6 +11,8 @@
 * Add the `Logo Region` option (Europe, USA, Japan) to load regional SVG logos (`<system>/<region>.svg`, `<system>/<scheme>-<region>.svg` or `<system>-<region>.svg`), with a fallback to other regions and to generic logos.
 * SVG logos can now have separate versions for each color scheme: when enabled, `_inc/logos-svg/<system>/light.svg` or `dark.svg` take precedence over `_inc/logos-svg/<system>.svg`, which in turn takes precedence over the bitmap logo.
 * Add the Retrobox distribution option to the theme settings.
+* Add the Knulli, Recalbox, RetroPie and EmuELEC distribution options. Selecting a distribution loads its splash screen background from `_inc/splash/<distribution>.svg` or `.png` (1080p minimum recommended), falling back to the default background if absent.
+* Splash progress bar now fills from left to right instead of from the center.
 * Add controllers status icons in carrousel (thanks [Manu](https://github.com/manutortosa-collab)).
 * Simplfy the customization of theme backgrounds (thanks [Manu](https://github.com/manutortosa-collab)).
 * Fix automatic collections not dynamically populating the games list (thanks [Manu](https://github.com/manutortosa-collab)).

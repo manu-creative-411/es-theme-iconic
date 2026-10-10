@@ -10,6 +10,34 @@
         <backgroudOverlayImage>overlay-light.png</backgroudOverlayImage>
         <splashProgressbarColor>444444</splashProgressbarColor>
     </variables>
+    <!-- Branding name used to find _inc/splash/<distro>.svg|png. "none" keeps the default splash background. -->
+    <variables ifSubset="distribution:none">
+        <splashDistro>none</splashDistro>
+    </variables>
+    <variables ifSubset="distribution:batocera">
+        <splashDistro>batocera</splashDistro>
+    </variables>
+    <variables ifSubset="distribution:knulli">
+        <splashDistro>knulli</splashDistro>
+    </variables>
+    <variables ifSubset="distribution:retrobat">
+        <splashDistro>retrobat</splashDistro>
+    </variables>
+    <variables ifSubset="distribution:retrobox">
+        <splashDistro>retrobox</splashDistro>
+    </variables>
+    <variables ifSubset="distribution:rocknix">
+        <splashDistro>rocknix</splashDistro>
+    </variables>
+    <variables ifSubset="distribution:recalbox">
+        <splashDistro>recalbox</splashDistro>
+    </variables>
+    <variables ifSubset="distribution:retropie">
+        <splashDistro>retropie</splashDistro>
+    </variables>
+    <variables ifSubset="distribution:emuelec">
+        <splashDistro>emuelec</splashDistro>
+    </variables>
     <view name="splash">
         <splash name="splash">
             <backgroundColor>000000</backgroundColor>
@@ -20,6 +48,8 @@
             <minSize>1 1</minSize>
             <linearSmooth>true</linearSmooth>
             <saturation>0.75</saturation>
+            <path if="exists('./_inc/splash/' + ${splashDistro} + '.svg')">./_inc/splash/${splashDistro}.svg</path>
+            <path if="exists('./_inc/splash/' + ${splashDistro} + '.png')">./_inc/splash/${splashDistro}.png</path>
             <path>./_inc/other/splash-background.png</path>
         </image>
         <image name="background-art-overlay" extra="true">
@@ -29,8 +59,9 @@
             <zIndex>5</zIndex>
         </image>
         <image name="progressbar">
-            <origin>0.5 0.5</origin>
-            <pos>0.5 0.5</pos>
+            <origin>0 0.5</origin>
+            <pos>0.35 0.5</pos>
+            <size>0.3 0.005</size>
             <color>${splashProgressbarColor}30</color>
             <colorEnd>${splashProgressbarColor}30</colorEnd>
         </image>

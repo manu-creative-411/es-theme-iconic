@@ -54,10 +54,14 @@ variables are derived from the values selected here and determine the appearance
   </subset>
   <subset name="distribution" displayName="${i18n.distribution}">
     <include name="none" displayName="${i18n.none}"/>
-    <include name="batocera" displayName="Batocera/Knulli"/>
+    <include name="batocera" displayName="Batocera"/>
+    <include name="knulli" displayName="Knulli"/>
     <include name="retrobat" displayName="RetroBat"/>
     <include name="rocknix" displayName="ROCKNIX"/>
     <include name="retrobox" displayName="Retrobox"/>
+    <include name="recalbox" displayName="Recalbox"/>
+    <include name="retropie" displayName="RetroPie"/>
+    <include name="emuelec" displayName="EmuELEC"/>
   </subset>
   <subset name="helpsystem" displayName="${i18n.helpSubsetName}">
 

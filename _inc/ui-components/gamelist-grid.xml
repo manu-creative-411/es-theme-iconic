@@ -51,7 +51,7 @@ It displays a grid of the boxart images of the games of the system being viewed.
       <imageSizeMode>maxSize</imageSizeMode>
       <padding>3 3</padding>
       <!-- Inactive tiles: the boxart tinted 10% darker (E6 = 90% of FF), fully opaque, in both color schemes. -->
-      <imageColor>9F9F9FFF</imageColor>
+      <imageColor>B1B1B1FF</imageColor>
     </gridtile>
     <gridtile name="selected">
       <backgroundCenterColor>00000000</backgroundCenterColor>
