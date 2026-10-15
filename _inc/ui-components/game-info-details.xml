@@ -1,4 +1,4 @@
-<!-- This component defines the left half of the screen in "detailed" and "grid" views.
+<!-- This component defines the left half of the screen (right half if "Game List Position" is "Left") in "detailed" and "grid" views.
 
 It displays a mixin of the game images, above the game metadata.
 -->
@@ -8,6 +8,7 @@ It displays a mixin of the game images, above the game metadata.
     <image name="game-details-panel" extra="true">
       <origin>0 0</origin>
       <path>./_inc/other/${gameDetailsPanelImage}</path>
+      <path ifSubset="gamelist-position:left">./_inc/other/game-details-panel-${logoColorScheme}-right.png</path>
       <pos>0 0</pos>
       <size>1 1</size>
       <zIndex>11</zIndex>
@@ -28,7 +29,7 @@ It displays a mixin of the game images, above the game metadata.
       <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
       <origin>0.5 0.5</origin>
       <linearSmooth>true</linearSmooth>
-      <pos>0.25 0.895</pos>
+      <pos>${infoCenterX} 0.895</pos>
       <origin>0.5 0.5</origin>
       <maxSize>${systemLogoGameDetailsWidthScale} 0.135</maxSize>
       <zIndex>11</zIndex>
@@ -39,7 +40,7 @@ It displays a mixin of the game images, above the game metadata.
       <alignment>center</alignment>
       <verticalAlignment>center</verticalAlignment>
       <origin>0.5 0.5</origin>
-      <pos>0.2495 0.895</pos>
+      <pos>${infoLogoTextX} 0.895</pos>
       <fontSize>0.036</fontSize>
       <glowColor>fafafaff</glowColor>
       <multiLine>true</multiLine>
@@ -58,11 +59,11 @@ It displays a mixin of the game images, above the game metadata.
       <visible ifSubset="media-type:image|mix">true</visible>
       <!-- Standalone mode. -->
       <origin ifSubset="media-type:image">0.5 0.5</origin>
-      <pos ifSubset="media-type:image">0.25 0.25</pos>
+      <pos ifSubset="media-type:image">${infoCenterX} 0.25</pos>
       <maxSize ifSubset="media-type:image">0.45 0.4</maxSize>
       <!-- Mix mode. -->
       <origin ifSubset="media-type:mix">0.5 0.5</origin>
-      <pos ifSubset="media-type:mix">0.25 0.25</pos>
+      <pos ifSubset="media-type:mix">${infoCenterX} 0.25</pos>
       <maxSize ifSubset="media-type:mix">0.425 0.35</maxSize>
     </image>
     <video name="md_video">
@@ -70,17 +71,17 @@ It displays a mixin of the game images, above the game metadata.
       <!-- Standalone mode. -->
       <zIndex ifSubset="media-type:image">12</zIndex>
       <origin ifSubset="media-type:image">0.5 0.5</origin>
-      <pos ifSubset="media-type:image">0.25 0.25</pos>
+      <pos ifSubset="media-type:image">${infoCenterX} 0.25</pos>
       <maxSize ifSubset="media-type:image">0.45 0.4</maxSize>
       <!-- Mix mode. -->
       <zIndex ifSubset="media-type:mix">12</zIndex>
       <origin ifSubset="media-type:mix">0.5 0.5</origin>
-      <pos ifSubset="media-type:mix">0.25 0.25</pos>
+      <pos ifSubset="media-type:mix">${infoCenterX} 0.25</pos>
       <maxSize ifSubset="media-type:mix">0.425 0.35</maxSize>
       <!-- Other modes. -->
       <zIndex ifSubset="media-type:boxart|marquee">14</zIndex>
       <origin ifSubset="media-type:boxart|marquee">0.5 0.5</origin>
-      <pos ifSubset="media-type:boxart|marquee">0.25 0.25</pos>
+      <pos ifSubset="media-type:boxart|marquee">${infoCenterX} 0.25</pos>
       <maxSize ifSubset="media-type:boxart|marquee">0.45 0.4</maxSize>
     </video>
     <image name="md_thumbnail">
@@ -89,11 +90,11 @@ It displays a mixin of the game images, above the game metadata.
       <visible ifSubset="media-type:boxart|mix">true</visible>
       <!-- Standalone mode. -->
       <origin ifSubset="media-type:boxart">0.5 0.5</origin>
-      <pos ifSubset="media-type:boxart">0.25 0.25</pos>
+      <pos ifSubset="media-type:boxart">${infoCenterX} 0.25</pos>
       <maxSize ifSubset="media-type:boxart">0.45 0.4</maxSize>
       <!-- Mix mode. -->
       <origin ifSubset="media-type:mix">0 1</origin>
-      <pos ifSubset="media-type:mix">0.025 0.45</pos>
+      <pos ifSubset="media-type:mix">${infoMixThumbnailX} 0.45</pos>
       <maxSize ifSubset="media-type:mix">0.15 0.25</maxSize>
     </image>
     <image name="md_marquee">
@@ -102,11 +103,11 @@ It displays a mixin of the game images, above the game metadata.
       <visible ifSubset="media-type:marquee|mix">true</visible>
       <!-- Standalone mode. -->
       <origin ifSubset="media-type:marquee">0.5 0.5</origin>
-      <pos ifSubset="media-type:marquee">0.25 0.25</pos>
+      <pos ifSubset="media-type:marquee">${infoCenterX} 0.25</pos>
       <maxSize ifSubset="media-type:marquee">0.45 0.4</maxSize>
       <!-- Mix mode. -->
       <origin ifSubset="media-type:mix">1 0</origin>
-      <pos ifSubset="media-type:mix">0.475 0.025</pos>
+      <pos ifSubset="media-type:mix">${infoMixMarqueeX} 0.025</pos>
       <maxSize ifSubset="media-type:mix">0.175 0.125</maxSize>
     </image>
     <text name="md_name">
@@ -120,7 +121,7 @@ It displays a mixin of the game images, above the game metadata.
       <autoScrollSpeed>50</autoScrollSpeed>
       <autoScrollDelay>1000</autoScrollDelay>
       <singleLineScroll>true</singleLineScroll>
-      <pos>0.05 0.488</pos>
+      <pos>${infoColumn1X} 0.488</pos>
       <size>0.42 0.024</size>
       <fontSize>0.024</fontSize>
       <lineSpacing>1</lineSpacing>
@@ -131,7 +132,7 @@ It displays a mixin of the game images, above the game metadata.
       <filledPath>./_inc/icons/icon-star-filled.svg</filledPath>
       <unfilledPath>./_inc/icons/icon-star-unfilled.svg</unfilledPath>
       <color>${gameMetadataColor}</color>
-      <pos>0.082 0.552</pos>
+      <pos>${infoRatingX} 0.552</pos>
       <size>0 ${gameRatingIconsHeightScale}</size>
     </rating>
     <text name="md_genre">
@@ -140,7 +141,7 @@ It displays a mixin of the game images, above the game metadata.
       <fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
       <color>${gameMetadataColor}</color>
       <lineSpacing>1</lineSpacing>
-      <pos>0.175 0.55</pos>
+      <pos>${infoColumn2X} 0.55</pos>
       <size>0.295 0.024</size>
       <fontSize>0.024</fontSize>
       <alignment>left</alignment>
@@ -156,7 +157,7 @@ It displays a mixin of the game images, above the game metadata.
       <color>${gameMetadataColor}</color>
       <lineSpacing>1</lineSpacing>
       <fontSize>0.024</fontSize>
-      <pos>0.05 0.602</pos>
+      <pos>${infoColumn1X} 0.602</pos>
       <size>0.08 0.024</size>
       <format>%Y</format>
       <alignment>left</alignment>
@@ -167,7 +168,7 @@ It displays a mixin of the game images, above the game metadata.
       <fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
       <color>${gameMetadataColor}</color>
       <lineSpacing>1</lineSpacing>
-      <pos>0.175 0.602</pos>
+      <pos>${infoColumn2X} 0.602</pos>
       <size>0.165 0.024</size>
       <fontSize>0.024</fontSize>
       <alignment>left</alignment>
@@ -183,7 +184,7 @@ It displays a mixin of the game images, above the game metadata.
       <color>${gameMetadataColor}</color>
       <lineSpacing>1</lineSpacing>
       <fontSize>0.024</fontSize>
-      <pos>0.38 0.602</pos>
+      <pos>${infoColumn3X} 0.602</pos>
       <size>0.09 0.024</size>
       <alignment>left</alignment>
     </datetime>
@@ -193,7 +194,7 @@ It displays a mixin of the game images, above the game metadata.
       <fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
       <color>${gameMetadataColor}</color>
       <lineSpacing>1</lineSpacing>
-      <pos>0.05 0.654</pos>
+      <pos>${infoColumn1X} 0.654</pos>
       <size>0.08 0.024</size>
       <fontSize>0.024</fontSize>
       <alignment>left</alignment>
@@ -208,7 +209,7 @@ It displays a mixin of the game images, above the game metadata.
       <fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
       <color>${gameMetadataColor}</color>
       <lineSpacing>1</lineSpacing>
-      <pos>0.175 0.654</pos>
+      <pos>${infoColumn2X} 0.654</pos>
       <size>0.165 0.024</size>
       <fontSize>0.024</fontSize>
       <alignment>left</alignment>
@@ -224,7 +225,7 @@ It displays a mixin of the game images, above the game metadata.
       <color>${gameMetadataColor}</color>
       <lineSpacing>1</lineSpacing>
       <fontSize>0.024</fontSize>
-      <pos>0.38 0.654</pos>
+      <pos>${infoColumn3X} 0.654</pos>
       <size>0.09 0.024</size>
       <alignment>left</alignment>
       <autoScroll>horizontal</autoScroll>
@@ -239,7 +240,7 @@ It displays a mixin of the game images, above the game metadata.
       <autoScrollSpeed>70</autoScrollSpeed>
       <autoScrollDelay>5000</autoScrollDelay>
       <color>${gameMetadataColor}</color>
-      <pos>0.033 0.6975</pos>
+      <pos>${infoDescriptionX} 0.6975</pos>
       <size>0.435 0.1</size>
       <!-- Font-size is 26 / 1080. -->
       <fontSize>0.02407407407</fontSize>

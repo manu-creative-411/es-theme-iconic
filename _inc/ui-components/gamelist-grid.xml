@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- This component defines the right half of the screen in "grid" view.
+<!-- This component defines the right half of the screen (left half if "Game List Position" is "Left") in "grid" view.
 
 It displays a grid of the boxart images of the games of the system being viewed.
 -->
@@ -9,9 +9,9 @@ It displays a grid of the boxart images of the games of the system being viewed.
     <!-- Fade over the bottom of the grid (and its next-row sliver), in the color of the color scheme. Only the right
          half of the screen, with a soft left edge. -->
     <image name="grid-fade-bottom" extra="true">
-      <path>./_inc/other/fade-bottom-right-${logoColorScheme}.png</path>
-      <origin>1 1</origin>
-      <pos>1 1</pos>
+      <path>./_inc/other/${gridFadeImage}-${logoColorScheme}.png</path>
+      <origin>${gridFadeOrigin}</origin>
+      <pos>${gridFadePos}</pos>
       <size>0.5 0.18</size>
       <zIndex>12</zIndex>
       <linearSmooth>true</linearSmooth>
@@ -22,7 +22,7 @@ It displays a grid of the boxart images of the games of the system being viewed.
       <margin>0.015</margin>
       <!-- The grid is taller than its two full rows: the extra space (top and bottom padding) shows a sliver
            of the previous/next row, as a visual hint that there are more games. It extends down to 0.965. -->
-      <pos>0.495 0</pos>
+      <pos>${gridX} 0</pos>
       <size>0.5 0.965</size>
       <!-- left top right bottom, relative to the screen. Sides: must be larger than how far the zoomed selected tile
            overflows its cell, or the grid clips it. Top: tile margin (0.015) + sliver of the previous row (0.033).
@@ -33,7 +33,7 @@ It displays a grid of the boxart images of the games of the system being viewed.
       <scrollbarColor>${gamelistSecondaryColor}</scrollbarColor>
       <scrollbarCorner>0.49</scrollbarCorner>
       <scrollbarSize>0.005</scrollbarSize>
-      <scrollbarAlignment>right</scrollbarAlignment>
+      <scrollbarAlignment>${gridScrollbarAlignment}</scrollbarAlignment>
       <!-- Selected tile zoom (shared with "full-grid"). Side padding must stay larger than the overflow it causes
            (zoom - 1) / 2 * tile width, or the grid clips the selected tile in the first/last column. -->
       <autoLayoutSelectedZoom>1.15</autoLayoutSelectedZoom>

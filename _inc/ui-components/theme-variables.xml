@@ -28,6 +28,50 @@ here are then used by the UI components to adjust the appearance of the theme.
     <themeCustomizationsPath ifSubset="distribution:batocera">/userdata/theme-customizations/iconic</themeCustomizationsPath>
     <themeCustomizationsPath ifSubset="distribution:retrobox">~/.emulationstation/theme-customizations/iconic</themeCustomizationsPath>
   </variables>
+  <!-- Config: Game List Position.
+
+    The "basic", "detailed" and "grid" views are split in two halves: the game list (or grid) and the
+    info area (system logo or game details). By default the list is on the right and the info area on
+    the left. With "left", both halves are swapped: every X coordinate of the info area is shifted by
+    +0.5, the one of the list by -0.5 (the grid is mirrored instead, to keep its margin to the screen
+    edge), and the panel images are replaced by their swapped versions (see the components).
+  -->
+  <variables ifSubset="gamelist-position:right">
+    <gamelistX>0.575</gamelistX>
+    <basicLogoX>0.27</basicLogoX>
+    <infoCenterX>0.25</infoCenterX>
+    <infoLogoTextX>0.2495</infoLogoTextX>
+    <infoMixThumbnailX>0.025</infoMixThumbnailX>
+    <infoMixMarqueeX>0.475</infoMixMarqueeX>
+    <infoColumn1X>0.05</infoColumn1X>
+    <infoRatingX>0.082</infoRatingX>
+    <infoColumn2X>0.175</infoColumn2X>
+    <infoColumn3X>0.38</infoColumn3X>
+    <infoDescriptionX>0.033</infoDescriptionX>
+    <gridX>0.495</gridX>
+    <gridScrollbarAlignment>right</gridScrollbarAlignment>
+    <gridFadeOrigin>1 1</gridFadeOrigin>
+    <gridFadePos>1 1</gridFadePos>
+    <gridFadeImage>fade-bottom-right</gridFadeImage>
+  </variables>
+  <variables ifSubset="gamelist-position:left">
+    <gamelistX>0.075</gamelistX>
+    <basicLogoX>0.77</basicLogoX>
+    <infoCenterX>0.75</infoCenterX>
+    <infoLogoTextX>0.7495</infoLogoTextX>
+    <infoMixThumbnailX>0.525</infoMixThumbnailX>
+    <infoMixMarqueeX>0.975</infoMixMarqueeX>
+    <infoColumn1X>0.55</infoColumn1X>
+    <infoRatingX>0.582</infoRatingX>
+    <infoColumn2X>0.675</infoColumn2X>
+    <infoColumn3X>0.88</infoColumn3X>
+    <infoDescriptionX>0.533</infoDescriptionX>
+    <gridX>0.005</gridX>
+    <gridScrollbarAlignment>left</gridScrollbarAlignment>
+    <gridFadeOrigin>0 1</gridFadeOrigin>
+    <gridFadePos>0 1</gridFadePos>
+    <gridFadeImage>fade-bottom-left</gridFadeImage>
+  </variables>
   <!-- Config: Smooth Resize. -->
   <variables>
     <smoothResize ifSubset="smooth-resize:yes">true</smoothResize>

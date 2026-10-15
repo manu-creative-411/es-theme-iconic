@@ -14,6 +14,9 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.aspect-ratio>Aspect Ratio</i18n.aspect-ratio>
     <i18n.automatic>Automatic</i18n.automatic>
     <i18n.color-scheme>Color Scheme</i18n.color-scheme>
+    <i18n.gamelist-position>Game List Position</i18n.gamelist-position>
+    <i18n.left>Left</i18n.left>
+    <i18n.right>Right</i18n.right>
     <i18n.light>Light</i18n.light>
     <i18n.dark>Dark</i18n.dark>
     <i18n.game-media-type>Game Media Type</i18n.game-media-type>
@@ -229,6 +232,9 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.aspect-ratio>Relación de aspecto</i18n.aspect-ratio>
     <i18n.automatic>Automático</i18n.automatic>
     <i18n.color-scheme>Esquema de color</i18n.color-scheme>
+    <i18n.gamelist-position>Posición de la lista de juegos</i18n.gamelist-position>
+    <i18n.left>Izquierda</i18n.left>
+    <i18n.right>Derecha</i18n.right>
     <i18n.light>Claro</i18n.light>
     <i18n.dark>Oscuro</i18n.dark>
     <i18n.game-media-type>Tipo de medio</i18n.game-media-type>

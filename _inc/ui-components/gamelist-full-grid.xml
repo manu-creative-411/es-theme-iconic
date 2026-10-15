@@ -37,6 +37,7 @@ EmulationStation gamelist options, globally or per system.
       <size>0.98 0.965</size>
       <autoLayout>7 2</autoLayout>
       <padding>0.011 0.178 0.011 0.091</padding>
+      <scrollbarAlignment>right</scrollbarAlignment>
     </imagegrid>
     <!-- System logo, top center. -->
     <image name="logo">

@@ -21,6 +21,10 @@ variables are derived from the values selected here and determine the appearance
     <include name="light" displayName="${i18n.light}"/>
     <include name="dark" displayName="${i18n.dark}"/>
   </subset>
+  <subset name="gamelist-position" displayName="${i18n.gamelist-position}">
+    <include name="right" displayName="${i18n.right}"/>
+    <include name="left" displayName="${i18n.left}"/>
+  </subset>
   <subset name="media-type" displayName="${i18n.game-media-type}">
     <include name="image" displayName="${i18n.image}"/>
     <include name="boxart" displayName="${i18n.boxart}"/>

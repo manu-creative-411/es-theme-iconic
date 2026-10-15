@@ -1,4 +1,4 @@
-<!-- This component defines the left half of the screen in "basic" view.
+<!-- This component defines the left half of the screen (right half if "Game List Position" is "Left") in "basic" view.
 
 It only displays the system logo at the center.
 -->
@@ -22,7 +22,7 @@ It only displays the system logo at the center.
       <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}/${logoColorScheme}-${logoRegion}.svg</path>
       <zIndex>11</zIndex>
       <visible>true</visible>
-      <pos>0.27 0.5</pos>
+      <pos>${basicLogoX} 0.5</pos>
       <maxSize>0.35 0.70</maxSize>
     </image>
     <text name="logoText">
@@ -31,7 +31,7 @@ It only displays the system logo at the center.
       <alignment>center</alignment>
       <verticalAlignment>center</verticalAlignment>
       <origin>0.5 0.5</origin>
-      <pos>0.27 0.5</pos>
+      <pos>${basicLogoX} 0.5</pos>
       <fontSize>0.1</fontSize>
       <glowColor>fafafaff</glowColor>
       <multiLine>true</multiLine>

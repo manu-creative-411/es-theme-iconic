@@ -35,6 +35,7 @@ The following options can be changed directly from the main menu under `User Int
 | -- | -- | -- |
 | Aspect Ratio | Enables you to select the correct aspect ratio for your screen. This will automatically set itself so you should not need to change it but if the theme layout looks odd or spacing looks incorrect you can use this setting to make sure the aspect ratio matches your screen. | `Automatic`, `16:9`, `16:10`, `4:3`, `3:2`, `1:1` |
 | Color Scheme | Sets the color scheme that is used for the theme. | `Light`, `Dark` |
+| Game List Position | Side of the screen where the game list (or grid) is displayed in the `basic`, `detailed` and `grid` views. With `Left`, the game list and the info area (system logo or game details) are swapped. The `Full Grid` view is not affected. | `Right`, `Left` |
 | Game Media Type | Selects the desired type of image displayed above game details. | `Boxart`, `Image`, `Marquee`, `Mix` |
 | Play Video Previews of Games | Toggles the video previews above game details (if available). | `Yes`, `No` |
 | Show Game Titles in Grid | Toggles the display of game titles in the grid view. | `No`, `Yes` |
