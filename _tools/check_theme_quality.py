@@ -49,12 +49,19 @@ def _base_dir() -> Path:
 
 
 # Folders where each system may also have its own subfolder (<system>/light.svg, <system>/dark.svg).
-_FOLDERS_WITH_SYSTEM_SUBDIRS = {"logos-svg"}
+# The bitmap logos ("logos") are organized exactly like the vector ones ("logos-svg").
+_FOLDERS_WITH_SYSTEM_SUBDIRS = {"logos-svg", "logos"}
+_LOGO_FOLDERS_EXTENSION = {"logos-svg": "svg", "logos": "webp"}
 _LOGO_REGIONS = ("eu", "us", "jp")
-# Valid names inside a system logo folder: light.svg, dark.svg, us.svg, light-eu.svg, dark-jp.svg, ...
+# Valid names inside a system logo folder: light.svg, dark.svg, us.svg, light-eu.svg, dark-jp.svg...
+# (or the same with the ".webp" extension in the bitmap logos folder).
+_REGIONS_RE = "|".join(_LOGO_REGIONS)
 _SYSTEM_SUBDIR_FILE_RE = re.compile(
-    rf"((light|dark)(-({'|'.join(_LOGO_REGIONS)}))?|({'|'.join(_LOGO_REGIONS)}))\.svg"
+    rf"((light|dark)(-({_REGIONS_RE}))?|({_REGIONS_RE}))\.(svg|webp)"
 )
+# Languages whose UI (theme options) is translated but not (yet) the long systems descriptions:
+# those fall back to the English description, so they are not required in the metadata files.
+_UI_ONLY_LANGS = {"eu", "gl", "cs", "sk", "hu", "el", "fi", "nb", "no", "uk"}
 
 
 def _iter_files(folder_type: str):
@@ -78,14 +85,15 @@ def _iter_files(folder_type: str):
 def _system_of(file: Path, systems: set[str]) -> str:
     """Return the system a file belongs to.
 
-    Handles <system>.ext, <system>-<region>.svg and <system>/<scheme>[-<region>].svg.
+    Handles <system>.ext, <system>-<region>.ext and <system>/<scheme>[-<region>].ext (in both the
+    vector and the bitmap logos folders).
     """
-    if file.parent.parent.name == "logos-svg":
+    if file.parent.parent.name in _LOGO_FOLDERS_EXTENSION:
         return file.parent.name
     if file.stem in systems:
         return file.stem
     for region in _LOGO_REGIONS:
-        if file.parent.name == "logos-svg" and file.stem.endswith(f"-{region}"):
+        if file.parent.name in _LOGO_FOLDERS_EXTENSION and file.stem.endswith(f"-{region}"):
             return file.stem[: -len(region) - 1]
     return file.stem
 
@@ -380,7 +388,8 @@ def check_systems_are_complete():
     """Check that each system with metadata also has all required images."""
     backgrounds = {file.stem for file in _iter_files("backgrounds")}
     controllers = {file.stem for file in _iter_files("controllers")}
-    logos = {file.stem for file in _iter_files("logos")}
+    # Only the top-level logos count: the ones in system subfolders are optional variants.
+    logos = {file.stem for file in _iter_files("logos") if file.parent.name == "logos"}
 
     for system in _iter_files("metadata"):
         if system.stem not in backgrounds:
@@ -399,12 +408,18 @@ def check_all_images_have_system():
 
     for dir in ["backgrounds", "overlays", "logos", "controllers", "logos-svg"]:
         for f in _iter_files(dir):
-            if _system_of(f, systems) not in systems:
+            logo_ext = _LOGO_FOLDERS_EXTENSION.get(f.parent.parent.name)
+            if logo_ext and f.suffix != f".{logo_ext}":
+                yield Failure(f, f"Expected a .{logo_ext} file")
+            elif _system_of(f, systems) not in systems:
                 yield Failure(f, "No associated system metadata")
-            elif f.parent.parent.name == "logos-svg" and not _SYSTEM_SUBDIR_FILE_RE.fullmatch(f.name):
+            elif (
+                f.parent.parent.name in _LOGO_FOLDERS_EXTENSION
+                and not _SYSTEM_SUBDIR_FILE_RE.fullmatch(f.name)
+            ):
                 yield Failure(
                     f,
-                    "Expected [light|dark][-]eu|us|jp.svg inside a system logo folder",
+                    "Expected [light|dark][-]eu|us|jp.<ext> inside a system logo folder",
                 )
             else:
                 yield Success(f)
@@ -518,6 +533,13 @@ def check_all_systems_fully_translated():
         if lang is None:
             continue
         required_langs.add(lang.strip().lower())
+
+    # "nb,no" style lists are ignored here: UI-only languages are never required.
+    required_langs = {
+        lang
+        for lang in required_langs
+        if not set(re.split(r"[\s,]+", lang)) & _UI_ONLY_LANGS
+    }
 
     if not required_langs:
         yield Failure(theme_lang, "No languages found")

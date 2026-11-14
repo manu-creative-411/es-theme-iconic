@@ -5,6 +5,9 @@ variables are derived from the values selected here and determine the appearance
 -->
 <theme>
   <formatVersion>7</formatVersion>
+  <!-- The first <include> of each subset is the default value (used until the user changes it in the
+  settings). Defaults of this theme: dark color scheme and vector (SVG) logos. These defaults are
+  mirrored in "splash.xml", which cannot include this file: keep both in sync. -->
   <subset name="aspect-ratio" displayName="${i18n.aspect-ratio}">
     <include if="${screen.ratio} == '16/9'" name="16-9-auto" displayName="${i18n.automatic}"/>
     <include if="${screen.ratio} == '16/10'" name="16-10-auto" displayName="${i18n.automatic}"/>
@@ -18,8 +21,8 @@ variables are derived from the values selected here and determine the appearance
     <include name="1-1" displayName="1:1"/>
   </subset>
   <subset name="color-scheme" displayName="${i18n.color-scheme}">
-    <include name="light" displayName="${i18n.light}"/>
     <include name="dark" displayName="${i18n.dark}"/>
+    <include name="light" displayName="${i18n.light}"/>
   </subset>
   <subset name="gamelist-position" displayName="${i18n.gamelist-position}">
     <include name="right" displayName="${i18n.right}"/>
@@ -44,8 +47,8 @@ variables are derived from the values selected here and determine the appearance
     <include name="es" displayName="EmulationStation"/>
   </subset>
   <subset name="use-svg-logos" displayName="${i18n.use-svg-logos}">
-    <include name="no" displayName="${i18n.no}"/>
     <include name="yes" displayName="${i18n.yes}"/>
+    <include name="no" displayName="${i18n.no}"/>
   </subset>
   <subset name="logo-region" displayName="${i18n.logo-region}">
     <include name="eu" displayName="${i18n.europe}"/>

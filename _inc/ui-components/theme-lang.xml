@@ -57,8 +57,9 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
 		<i18n.xboxbuttons>Xbox style</i18n.xboxbuttons>
 		<i18n.snesbuttons>SNES style</i18n.snesbuttons>
 		<i18n.psxbuttons>PlayStation Style</i18n.psxbuttons>
+    <i18n.standard>Standard</i18n.standard>
 		<i18n.buttons6>Arcade 6 buttons</i18n.buttons6>
-		<i18n.buttons8>Arcade 8 butttons</i18n.buttons8>
+		<i18n.buttons8>Arcade 8 buttons</i18n.buttons8>
 		<i18n.helpSubsetName>Button labels style</i18n.helpSubsetName>
 
   </variables>
@@ -68,6 +69,9 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.aspect-ratio>نسبة العرض إلى الارتفاع</i18n.aspect-ratio>
     <i18n.automatic>تلقائي</i18n.automatic>
     <i18n.color-scheme>نظام الألوان</i18n.color-scheme>
+    <i18n.gamelist-position>موضع قائمة الألعاب</i18n.gamelist-position>
+    <i18n.left>يسار</i18n.left>
+    <i18n.right>يمين</i18n.right>
     <i18n.light>فاتح</i18n.light>
     <i18n.dark>داكن</i18n.dark>
     <i18n.game-media-type>نوع الوسائط</i18n.game-media-type>
@@ -103,12 +107,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>المحاكي</i18n.hardware-emulator>
     <i18n.hardware-os>نظام التشغيل</i18n.hardware-os>
     <i18n.hardware-port>المنفذ</i18n.hardware-port>
+    <i18n.helpbuttons>موضع الأزرار</i18n.helpbuttons>
+    <i18n.xboxbuttons>نمط Xbox</i18n.xboxbuttons>
+    <i18n.snesbuttons>نمط SNES</i18n.snesbuttons>
+    <i18n.psxbuttons>نمط PlayStation</i18n.psxbuttons>
+    <i18n.standard>قياسي</i18n.standard>
+    <i18n.buttons6>أركيد 6 أزرار</i18n.buttons6>
+    <i18n.buttons8>أركيد 8 أزرار</i18n.buttons8>
+    <i18n.helpSubsetName>نمط تسميات الأزرار</i18n.helpSubsetName>
   </variables>
   <variables lang="bs">
     <systemDescription>Pogledajte i igrajte ${system.fullName}.</systemDescription>
     <i18n.aspect-ratio>Omjer slike</i18n.aspect-ratio>
     <i18n.automatic>Automatski</i18n.automatic>
     <i18n.color-scheme>Šema boja</i18n.color-scheme>
+    <i18n.gamelist-position>Pozicija liste igara</i18n.gamelist-position>
+    <i18n.left>Lijevo</i18n.left>
+    <i18n.right>Desno</i18n.right>
     <i18n.light>Svijetla</i18n.light>
     <i18n.dark>Tamna</i18n.dark>
     <i18n.game-media-type>Tip medija</i18n.game-media-type>
@@ -144,12 +159,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Emulator</i18n.hardware-emulator>
     <i18n.hardware-os>OS</i18n.hardware-os>
     <i18n.hardware-port>Poznato</i18n.hardware-port>
+    <i18n.helpbuttons>Pozicija tipki</i18n.helpbuttons>
+    <i18n.xboxbuttons>Xbox stil</i18n.xboxbuttons>
+    <i18n.snesbuttons>SNES stil</i18n.snesbuttons>
+    <i18n.psxbuttons>PlayStation stil</i18n.psxbuttons>
+    <i18n.standard>Standardno</i18n.standard>
+    <i18n.buttons6>Arkadni 6 tipki</i18n.buttons6>
+    <i18n.buttons8>Arkadni 8 tipki</i18n.buttons8>
+    <i18n.helpSubsetName>Stil oznaka tipki</i18n.helpSubsetName>
   </variables>
   <variables lang="ca">
     <systemDescription>Veure i jugar a ${system.fullName}.</systemDescription>
     <i18n.aspect-ratio>Relació d'aspecte</i18n.aspect-ratio>
     <i18n.automatic>Automàtic</i18n.automatic>
     <i18n.color-scheme>Esquema de color</i18n.color-scheme>
+    <i18n.gamelist-position>Posició de la llista de jocs</i18n.gamelist-position>
+    <i18n.left>Esquerra</i18n.left>
+    <i18n.right>Dreta</i18n.right>
     <i18n.light>Clar</i18n.light>
     <i18n.dark>Fosc</i18n.dark>
     <i18n.game-media-type>Tipus de mitjà</i18n.game-media-type>
@@ -185,12 +211,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Emulador</i18n.hardware-emulator>
     <i18n.hardware-os>OS</i18n.hardware-os>
     <i18n.hardware-port>Port</i18n.hardware-port>
+    <i18n.helpbuttons>Posició dels botons</i18n.helpbuttons>
+    <i18n.xboxbuttons>Estil Xbox</i18n.xboxbuttons>
+    <i18n.snesbuttons>Estil SNES</i18n.snesbuttons>
+    <i18n.psxbuttons>Estil PlayStation</i18n.psxbuttons>
+    <i18n.standard>Estàndard</i18n.standard>
+    <i18n.buttons6>Arcade 6 botons</i18n.buttons6>
+    <i18n.buttons8>Arcade 8 botons</i18n.buttons8>
+    <i18n.helpSubsetName>Estil de les etiquetes dels botons</i18n.helpSubsetName>
   </variables>
   <variables lang="de">
     <systemDescription>Ansehen und spielen ${system.fullName}.</systemDescription>
     <i18n.aspect-ratio>Seitenverhältnis</i18n.aspect-ratio>
     <i18n.automatic>Automatisch</i18n.automatic>
     <i18n.color-scheme>Farbschema</i18n.color-scheme>
+    <i18n.gamelist-position>Position der Spieleliste</i18n.gamelist-position>
+    <i18n.left>Links</i18n.left>
+    <i18n.right>Rechts</i18n.right>
     <i18n.light>Hell</i18n.light>
     <i18n.dark>Dunkel</i18n.dark>
     <i18n.game-media-type>Medientyp</i18n.game-media-type>
@@ -226,6 +263,14 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Emulator</i18n.hardware-emulator>
     <i18n.hardware-os>OS</i18n.hardware-os>
     <i18n.hardware-port>Hafen</i18n.hardware-port>
+    <i18n.helpbuttons>Tastenposition</i18n.helpbuttons>
+    <i18n.xboxbuttons>Xbox-Stil</i18n.xboxbuttons>
+    <i18n.snesbuttons>SNES-Stil</i18n.snesbuttons>
+    <i18n.psxbuttons>PlayStation-Stil</i18n.psxbuttons>
+    <i18n.standard>Standard</i18n.standard>
+    <i18n.buttons6>Arcade 6 Tasten</i18n.buttons6>
+    <i18n.buttons8>Arcade 8 Tasten</i18n.buttons8>
+    <i18n.helpSubsetName>Stil der Tastenbeschriftung</i18n.helpSubsetName>
   </variables>
   <variables lang="es">
     <systemDescription>Ver y jugar a ${system.fullName}.</systemDescription>
@@ -274,6 +319,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
 		<i18n.xboxbuttons>Estilo Xbox 360</i18n.xboxbuttons>
 		<i18n.snesbuttons>Estilo Super Nintendo</i18n.snesbuttons>
 		<i18n.psxbuttons>Estilo PlayStation</i18n.psxbuttons>
+    <i18n.standard>Estándar</i18n.standard>
 		<i18n.buttons6>Arcade 6 botones</i18n.buttons6>
 		<i18n.buttons8>Arcade 8 botones</i18n.buttons8>
 		<i18n.helpSubsetName>Estilo de los labels de los botones</i18n.helpSubsetName>
@@ -283,6 +329,9 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.aspect-ratio>Rapport d'aspect</i18n.aspect-ratio>
     <i18n.automatic>Automatique</i18n.automatic>
     <i18n.color-scheme>Jeu de couleurs</i18n.color-scheme>
+    <i18n.gamelist-position>Position de la liste de jeux</i18n.gamelist-position>
+    <i18n.left>Gauche</i18n.left>
+    <i18n.right>Droite</i18n.right>
     <i18n.light>Clair</i18n.light>
     <i18n.dark>Sombre</i18n.dark>
     <i18n.game-media-type>Type de média</i18n.game-media-type>
@@ -318,12 +367,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Emulateur</i18n.hardware-emulator>
     <i18n.hardware-os>OS</i18n.hardware-os>
     <i18n.hardware-port>Portage</i18n.hardware-port>
+    <i18n.helpbuttons>Position des boutons</i18n.helpbuttons>
+    <i18n.xboxbuttons>Style Xbox</i18n.xboxbuttons>
+    <i18n.snesbuttons>Style SNES</i18n.snesbuttons>
+    <i18n.psxbuttons>Style PlayStation</i18n.psxbuttons>
+    <i18n.standard>Standard</i18n.standard>
+    <i18n.buttons6>Arcade 6 boutons</i18n.buttons6>
+    <i18n.buttons8>Arcade 8 boutons</i18n.buttons8>
+    <i18n.helpSubsetName>Style des étiquettes de boutons</i18n.helpSubsetName>
   </variables>
   <variables lang="hr">
     <systemDescription>Pogledajte i igrajte ${system.fullName}.</systemDescription>
     <i18n.aspect-ratio>Omjer slike</i18n.aspect-ratio>
     <i18n.automatic>Automatski</i18n.automatic>
     <i18n.color-scheme>Shema boja</i18n.color-scheme>
+    <i18n.gamelist-position>Položaj popisa igara</i18n.gamelist-position>
+    <i18n.left>Lijevo</i18n.left>
+    <i18n.right>Desno</i18n.right>
     <i18n.light>Svijetla</i18n.light>
     <i18n.dark>Tamna</i18n.dark>
     <i18n.game-media-type>Tip medija</i18n.game-media-type>
@@ -359,12 +419,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Emulator</i18n.hardware-emulator>
     <i18n.hardware-os>OS</i18n.hardware-os>
     <i18n.hardware-port>Portja</i18n.hardware-port>
+    <i18n.helpbuttons>Položaj tipki</i18n.helpbuttons>
+    <i18n.xboxbuttons>Xbox stil</i18n.xboxbuttons>
+    <i18n.snesbuttons>SNES stil</i18n.snesbuttons>
+    <i18n.psxbuttons>PlayStation stil</i18n.psxbuttons>
+    <i18n.standard>Standardno</i18n.standard>
+    <i18n.buttons6>Arkada 6 tipki</i18n.buttons6>
+    <i18n.buttons8>Arkada 8 tipki</i18n.buttons8>
+    <i18n.helpSubsetName>Stil oznaka tipki</i18n.helpSubsetName>
   </variables>
   <variables lang="it">
     <systemDescription>Visualizza e gioca ${system.fullName}.</systemDescription>
     <i18n.aspect-ratio>Rapporto d'aspetto</i18n.aspect-ratio>
     <i18n.automatic>Automatico</i18n.automatic>
     <i18n.color-scheme>Schema colore</i18n.color-scheme>
+    <i18n.gamelist-position>Posizione dell'elenco giochi</i18n.gamelist-position>
+    <i18n.left>Sinistra</i18n.left>
+    <i18n.right>Destra</i18n.right>
     <i18n.light>Chiaro</i18n.light>
     <i18n.dark>Scuro</i18n.dark>
     <i18n.game-media-type>Tipo di media</i18n.game-media-type>
@@ -400,12 +471,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Emulatore</i18n.hardware-emulator>
     <i18n.hardware-os>OS</i18n.hardware-os>
     <i18n.hardware-port>Porting</i18n.hardware-port>
+    <i18n.helpbuttons>Posizione dei pulsanti</i18n.helpbuttons>
+    <i18n.xboxbuttons>Stile Xbox</i18n.xboxbuttons>
+    <i18n.snesbuttons>Stile SNES</i18n.snesbuttons>
+    <i18n.psxbuttons>Stile PlayStation</i18n.psxbuttons>
+    <i18n.standard>Standard</i18n.standard>
+    <i18n.buttons6>Arcade 6 pulsanti</i18n.buttons6>
+    <i18n.buttons8>Arcade 8 pulsanti</i18n.buttons8>
+    <i18n.helpSubsetName>Stile delle etichette dei pulsanti</i18n.helpSubsetName>
   </variables>
   <variables lang="nl">
     <systemDescription>Bekijk en speel ${system.fullName}.</systemDescription>
     <i18n.aspect-ratio>Beeldverhouding</i18n.aspect-ratio>
     <i18n.automatic>Automatisch</i18n.automatic>
     <i18n.color-scheme>Kleurenschema</i18n.color-scheme>
+    <i18n.gamelist-position>Positie van de spellijst</i18n.gamelist-position>
+    <i18n.left>Links</i18n.left>
+    <i18n.right>Rechts</i18n.right>
     <i18n.light>Licht</i18n.light>
     <i18n.dark>Donker</i18n.dark>
     <i18n.game-media-type>Mediatype</i18n.game-media-type>
@@ -441,12 +523,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Emulator</i18n.hardware-emulator>
     <i18n.hardware-os>OS</i18n.hardware-os>
     <i18n.hardware-port>Port</i18n.hardware-port>
+    <i18n.helpbuttons>Knoppenpositie</i18n.helpbuttons>
+    <i18n.xboxbuttons>Xbox-stijl</i18n.xboxbuttons>
+    <i18n.snesbuttons>SNES-stijl</i18n.snesbuttons>
+    <i18n.psxbuttons>PlayStation-stijl</i18n.psxbuttons>
+    <i18n.standard>Standaard</i18n.standard>
+    <i18n.buttons6>Arcade 6 knoppen</i18n.buttons6>
+    <i18n.buttons8>Arcade 8 knoppen</i18n.buttons8>
+    <i18n.helpSubsetName>Stijl van knoplabels</i18n.helpSubsetName>
   </variables>
   <variables lang="ja">
     <systemDescription>${system.fullName}を表示してプレイする。</systemDescription>
     <i18n.aspect-ratio>アスペクト比</i18n.aspect-ratio>
     <i18n.automatic>自動</i18n.automatic>
     <i18n.color-scheme>カラースキーム</i18n.color-scheme>
+    <i18n.gamelist-position>ゲームリストの位置</i18n.gamelist-position>
+    <i18n.left>左</i18n.left>
+    <i18n.right>右</i18n.right>
     <i18n.light>ライト</i18n.light>
     <i18n.dark>ダーク</i18n.dark>
     <i18n.game-media-type>メディアタイプ</i18n.game-media-type>
@@ -482,12 +575,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>エミュレータ</i18n.hardware-emulator>
     <i18n.hardware-os>OS</i18n.hardware-os>
     <i18n.hardware-port>ポート</i18n.hardware-port>
+    <i18n.helpbuttons>ボタン配置</i18n.helpbuttons>
+    <i18n.xboxbuttons>Xboxスタイル</i18n.xboxbuttons>
+    <i18n.snesbuttons>SNESスタイル</i18n.snesbuttons>
+    <i18n.psxbuttons>PlayStationスタイル</i18n.psxbuttons>
+    <i18n.standard>標準</i18n.standard>
+    <i18n.buttons6>アーケード6ボタン</i18n.buttons6>
+    <i18n.buttons8>アーケード8ボタン</i18n.buttons8>
+    <i18n.helpSubsetName>ボタンラベルのスタイル</i18n.helpSubsetName>
   </variables>
   <variables lang="ko">
     <systemDescription>${system.fullName}을(를) 보고 플레이하세요.</systemDescription>
     <i18n.aspect-ratio>화면 비율</i18n.aspect-ratio>
     <i18n.automatic>자동</i18n.automatic>
     <i18n.color-scheme>색 구성표</i18n.color-scheme>
+    <i18n.gamelist-position>게임 목록 위치</i18n.gamelist-position>
+    <i18n.left>왼쪽</i18n.left>
+    <i18n.right>오른쪽</i18n.right>
     <i18n.light>밝게</i18n.light>
     <i18n.dark>어둡게</i18n.dark>
     <i18n.game-media-type>미디어 유형</i18n.game-media-type>
@@ -523,12 +627,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>에뮬레이터</i18n.hardware-emulator>
     <i18n.hardware-os>OS</i18n.hardware-os>
     <i18n.hardware-port>포트</i18n.hardware-port>
+    <i18n.helpbuttons>버튼 위치</i18n.helpbuttons>
+    <i18n.xboxbuttons>Xbox 스타일</i18n.xboxbuttons>
+    <i18n.snesbuttons>SNES 스타일</i18n.snesbuttons>
+    <i18n.psxbuttons>PlayStation 스타일</i18n.psxbuttons>
+    <i18n.standard>표준</i18n.standard>
+    <i18n.buttons6>아케이드 6버튼</i18n.buttons6>
+    <i18n.buttons8>아케이드 8버튼</i18n.buttons8>
+    <i18n.helpSubsetName>버튼 라벨 스타일</i18n.helpSubsetName>
   </variables>
   <variables lang="pl">
     <systemDescription>Wyświetl i graj ${system.fullName}.</systemDescription>
     <i18n.aspect-ratio>Proporcje obrazu</i18n.aspect-ratio>
     <i18n.automatic>Automatyczny</i18n.automatic>
     <i18n.color-scheme>Schemat kolorów</i18n.color-scheme>
+    <i18n.gamelist-position>Pozycja listy gier</i18n.gamelist-position>
+    <i18n.left>Lewo</i18n.left>
+    <i18n.right>Prawo</i18n.right>
     <i18n.light>Jasny</i18n.light>
     <i18n.dark>Ciemny</i18n.dark>
     <i18n.game-media-type>Typ multimediów</i18n.game-media-type>
@@ -564,12 +679,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Emulator</i18n.hardware-emulator>
     <i18n.hardware-os>OS</i18n.hardware-os>
     <i18n.hardware-port>Port</i18n.hardware-port>
+    <i18n.helpbuttons>Pozycja przycisków</i18n.helpbuttons>
+    <i18n.xboxbuttons>Styl Xbox</i18n.xboxbuttons>
+    <i18n.snesbuttons>Styl SNES</i18n.snesbuttons>
+    <i18n.psxbuttons>Styl PlayStation</i18n.psxbuttons>
+    <i18n.standard>Standardowy</i18n.standard>
+    <i18n.buttons6>Arcade 6 przycisków</i18n.buttons6>
+    <i18n.buttons8>Arcade 8 przycisków</i18n.buttons8>
+    <i18n.helpSubsetName>Styl etykiet przycisków</i18n.helpSubsetName>
   </variables>
   <variables lang="pt">
     <systemDescription>Visualize e jogue ${system.fullName}.</systemDescription>
     <i18n.aspect-ratio>Proporção de aspecto</i18n.aspect-ratio>
     <i18n.automatic>Automático</i18n.automatic>
     <i18n.color-scheme>Esquema de cores</i18n.color-scheme>
+    <i18n.gamelist-position>Posição da lista de jogos</i18n.gamelist-position>
+    <i18n.left>Esquerda</i18n.left>
+    <i18n.right>Direita</i18n.right>
     <i18n.light>Claro</i18n.light>
     <i18n.dark>Escuro</i18n.dark>
     <i18n.game-media-type>Tipo de mídia</i18n.game-media-type>
@@ -605,12 +731,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Emulador</i18n.hardware-emulator>
     <i18n.hardware-os>SO</i18n.hardware-os>
     <i18n.hardware-port>Porto</i18n.hardware-port>
+    <i18n.helpbuttons>Posição dos botões</i18n.helpbuttons>
+    <i18n.xboxbuttons>Estilo Xbox</i18n.xboxbuttons>
+    <i18n.snesbuttons>Estilo SNES</i18n.snesbuttons>
+    <i18n.psxbuttons>Estilo PlayStation</i18n.psxbuttons>
+    <i18n.standard>Padrão</i18n.standard>
+    <i18n.buttons6>Arcade 6 botões</i18n.buttons6>
+    <i18n.buttons8>Arcade 8 botões</i18n.buttons8>
+    <i18n.helpSubsetName>Estilo dos rótulos dos botões</i18n.helpSubsetName>
   </variables>
   <variables lang="ro">
     <systemDescription>Vizualizați și jucați ${system.fullName}.</systemDescription>
     <i18n.aspect-ratio>Raport de aspect</i18n.aspect-ratio>
     <i18n.automatic>Automat</i18n.automatic>
     <i18n.color-scheme>Schemă de culori</i18n.color-scheme>
+    <i18n.gamelist-position>Poziția listei de jocuri</i18n.gamelist-position>
+    <i18n.left>Stânga</i18n.left>
+    <i18n.right>Dreapta</i18n.right>
     <i18n.light>Deschis</i18n.light>
     <i18n.dark>Întunecat</i18n.dark>
     <i18n.game-media-type>Tip de media</i18n.game-media-type>
@@ -646,12 +783,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Emulator</i18n.hardware-emulator>
     <i18n.hardware-os>SO</i18n.hardware-os>
     <i18n.hardware-port>Port</i18n.hardware-port>
+    <i18n.helpbuttons>Poziția butoanelor</i18n.helpbuttons>
+    <i18n.xboxbuttons>Stil Xbox</i18n.xboxbuttons>
+    <i18n.snesbuttons>Stil SNES</i18n.snesbuttons>
+    <i18n.psxbuttons>Stil PlayStation</i18n.psxbuttons>
+    <i18n.standard>Standard</i18n.standard>
+    <i18n.buttons6>Arcade 6 butoane</i18n.buttons6>
+    <i18n.buttons8>Arcade 8 butoane</i18n.buttons8>
+    <i18n.helpSubsetName>Stilul etichetelor butoanelor</i18n.helpSubsetName>
   </variables>
   <variables lang="ru">
     <systemDescription>Просмотреть и играть в ${system.fullName}.</systemDescription>
     <i18n.aspect-ratio>Соотношение сторон</i18n.aspect-ratio>
     <i18n.automatic>Автоматически</i18n.automatic>
     <i18n.color-scheme>Цветовая схема</i18n.color-scheme>
+    <i18n.gamelist-position>Положение списка игр</i18n.gamelist-position>
+    <i18n.left>Слева</i18n.left>
+    <i18n.right>Справа</i18n.right>
     <i18n.light>Светлая</i18n.light>
     <i18n.dark>Тёмная</i18n.dark>
     <i18n.game-media-type>Тип медиа</i18n.game-media-type>
@@ -687,12 +835,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Эмулятор</i18n.hardware-emulator>
     <i18n.hardware-os>OS</i18n.hardware-os>
     <i18n.hardware-port>Порт</i18n.hardware-port>
+    <i18n.helpbuttons>Расположение кнопок</i18n.helpbuttons>
+    <i18n.xboxbuttons>Стиль Xbox</i18n.xboxbuttons>
+    <i18n.snesbuttons>Стиль SNES</i18n.snesbuttons>
+    <i18n.psxbuttons>Стиль PlayStation</i18n.psxbuttons>
+    <i18n.standard>Стандартный</i18n.standard>
+    <i18n.buttons6>Аркада 6 кнопок</i18n.buttons6>
+    <i18n.buttons8>Аркада 8 кнопок</i18n.buttons8>
+    <i18n.helpSubsetName>Стиль подписей кнопок</i18n.helpSubsetName>
   </variables>
   <variables lang="sr">
     <systemDescription>Погледајте и играјте ${system.fullName}.</systemDescription>
     <i18n.aspect-ratio>Однос слике</i18n.aspect-ratio>
     <i18n.automatic>Аутоматски</i18n.automatic>
     <i18n.color-scheme>Шема боја</i18n.color-scheme>
+    <i18n.gamelist-position>Положај листе игара</i18n.gamelist-position>
+    <i18n.left>Лево</i18n.left>
+    <i18n.right>Десно</i18n.right>
     <i18n.light>Светла</i18n.light>
     <i18n.dark>Тамна</i18n.dark>
     <i18n.game-media-type>Тип медија</i18n.game-media-type>
@@ -728,12 +887,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Емулатор</i18n.hardware-emulator>
     <i18n.hardware-os>Ос</i18n.hardware-os>
     <i18n.hardware-port>Порта</i18n.hardware-port>
+    <i18n.helpbuttons>Положај тастера</i18n.helpbuttons>
+    <i18n.xboxbuttons>Xbox стил</i18n.xboxbuttons>
+    <i18n.snesbuttons>SNES стил</i18n.snesbuttons>
+    <i18n.psxbuttons>PlayStation стил</i18n.psxbuttons>
+    <i18n.standard>Стандардно</i18n.standard>
+    <i18n.buttons6>Аркада 6 тастера</i18n.buttons6>
+    <i18n.buttons8>Аркада 8 тастера</i18n.buttons8>
+    <i18n.helpSubsetName>Стил ознака тастера</i18n.helpSubsetName>
   </variables>
   <variables lang="sv">
     <systemDescription>Visa och spela ${system.fullName}.</systemDescription>
     <i18n.aspect-ratio>Bildförhållande</i18n.aspect-ratio>
     <i18n.automatic>Automatisk</i18n.automatic>
     <i18n.color-scheme>Färgschema</i18n.color-scheme>
+    <i18n.gamelist-position>Spellistans position</i18n.gamelist-position>
+    <i18n.left>Vänster</i18n.left>
+    <i18n.right>Höger</i18n.right>
     <i18n.light>Ljus</i18n.light>
     <i18n.dark>Mörk</i18n.dark>
     <i18n.game-media-type>Mediatyp</i18n.game-media-type>
@@ -769,12 +939,23 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>Emulator</i18n.hardware-emulator>
     <i18n.hardware-os>Mapp</i18n.hardware-os>
     <i18n.hardware-port>Port</i18n.hardware-port>
+    <i18n.helpbuttons>Knappplacering</i18n.helpbuttons>
+    <i18n.xboxbuttons>Xbox-stil</i18n.xboxbuttons>
+    <i18n.snesbuttons>SNES-stil</i18n.snesbuttons>
+    <i18n.psxbuttons>PlayStation-stil</i18n.psxbuttons>
+    <i18n.standard>Standard</i18n.standard>
+    <i18n.buttons6>Arkad 6 knappar</i18n.buttons6>
+    <i18n.buttons8>Arkad 8 knappar</i18n.buttons8>
+    <i18n.helpSubsetName>Stil på knappetiketter</i18n.helpSubsetName>
   </variables>
   <variables lang="zh">
     <systemDescription>查看并游玩 ${system.fullName}。</systemDescription>
     <i18n.aspect-ratio>宽高比</i18n.aspect-ratio>
     <i18n.automatic>自动</i18n.automatic>
     <i18n.color-scheme>配色方案</i18n.color-scheme>
+    <i18n.gamelist-position>游戏列表位置</i18n.gamelist-position>
+    <i18n.left>左</i18n.left>
+    <i18n.right>右</i18n.right>
     <i18n.light>浅色</i18n.light>
     <i18n.dark>深色</i18n.dark>
     <i18n.game-media-type>媒体类型</i18n.game-media-type>
@@ -810,5 +991,481 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.hardware-emulator>仿真器</i18n.hardware-emulator>
     <i18n.hardware-os>操作系统</i18n.hardware-os>
     <i18n.hardware-port>端口</i18n.hardware-port>
+    <i18n.helpbuttons>按键位置</i18n.helpbuttons>
+    <i18n.xboxbuttons>Xbox 风格</i18n.xboxbuttons>
+    <i18n.snesbuttons>SNES 风格</i18n.snesbuttons>
+    <i18n.psxbuttons>PlayStation 风格</i18n.psxbuttons>
+    <i18n.standard>标准</i18n.standard>
+    <i18n.buttons6>街机 6 键</i18n.buttons6>
+    <i18n.buttons8>街机 8 键</i18n.buttons8>
+    <i18n.helpSubsetName>按键标签样式</i18n.helpSubsetName>
+  </variables>
+  <variables lang="eu">
+    <systemDescription>${system.fullName} ikusi eta jokatu.</systemDescription>
+    <i18n.aspect-ratio>Aspektu-erlazioa</i18n.aspect-ratio>
+    <i18n.automatic>Automatikoa</i18n.automatic>
+    <i18n.color-scheme>Kolore-eskema</i18n.color-scheme>
+    <i18n.gamelist-position>Joko-zerrendaren kokalekua</i18n.gamelist-position>
+    <i18n.left>Ezkerra</i18n.left>
+    <i18n.right>Eskuina</i18n.right>
+    <i18n.light>Argia</i18n.light>
+    <i18n.dark>Iluna</i18n.dark>
+    <i18n.game-media-type>Multimedia mota</i18n.game-media-type>
+    <i18n.image>Irudia</i18n.image>
+    <i18n.boxart>Kaxaren azala</i18n.boxart>
+    <i18n.marquee>Logotipoa</i18n.marquee>
+    <i18n.mix>Nahastua</i18n.mix>
+    <i18n.play-video-previews>Erreproduzitu jokoen bideo-aurreikuspegiak</i18n.play-video-previews>
+    <i18n.yes>Bai</i18n.yes>
+    <i18n.no>Ez</i18n.no>
+    <i18n.show-game-titles-in-grid>Erakutsi jokoen izenburuak saretan</i18n.show-game-titles-in-grid>
+    <i18n.metadata-source>Metadatuen iturria</i18n.metadata-source>
+    <i18n.theme>Gaia</i18n.theme>
+    <i18n.use-svg-logos>Erabili bektore-grafikoak logotipoetarako</i18n.use-svg-logos>
+    <i18n.logo-region>Logotipoen eskualdea</i18n.logo-region>
+    <i18n.europe>Europa</i18n.europe>
+    <i18n.usa>AEB</i18n.usa>
+    <i18n.japan>Japonia</i18n.japan>
+    <i18n.smooth-resize>Tamaina-aldaketa leuna</i18n.smooth-resize>
+    <i18n.distribution>Banaketa</i18n.distribution>
+    <i18n.none>Bat ere ez</i18n.none>
+    <i18n.various>Askotarikoak</i18n.various>
+    <i18n.auto-collection>Bilduma automatikoa</i18n.auto-collection>
+    <i18n.custom-collection>Bilduma pertsonalizatua</i18n.custom-collection>
+    <i18n.misc-system>Sistema askotarikoa</i18n.misc-system>
+    <i18n.hardware-computer>Ordenagailua</i18n.hardware-computer>
+    <i18n.hardware-engine>Motorra</i18n.hardware-engine>
+    <i18n.hardware-arcade>Arcade</i18n.hardware-arcade>
+    <i18n.hardware-portable>Eramangarria</i18n.hardware-portable>
+    <i18n.hardware-folder>Karpeta</i18n.hardware-folder>
+    <i18n.hardware-console>Kontsola</i18n.hardware-console>
+    <i18n.hardware-peripheral>Periferikoa</i18n.hardware-peripheral>
+    <i18n.hardware-emulator>Emuladorea</i18n.hardware-emulator>
+    <i18n.hardware-os>Sistema eragilea</i18n.hardware-os>
+    <i18n.hardware-port>Portea</i18n.hardware-port>
+    <i18n.helpbuttons>Botoien kokalekua</i18n.helpbuttons>
+    <i18n.xboxbuttons>Xbox estiloa</i18n.xboxbuttons>
+    <i18n.snesbuttons>SNES estiloa</i18n.snesbuttons>
+    <i18n.psxbuttons>PlayStation estiloa</i18n.psxbuttons>
+    <i18n.standard>Estandarra</i18n.standard>
+    <i18n.buttons6>Arcade 6 botoi</i18n.buttons6>
+    <i18n.buttons8>Arcade 8 botoi</i18n.buttons8>
+    <i18n.helpSubsetName>Botoi-etiketen estiloa</i18n.helpSubsetName>
+  </variables>
+  <variables lang="gl">
+    <systemDescription>Ver e xogar a ${system.fullName}.</systemDescription>
+    <i18n.aspect-ratio>Relación de aspecto</i18n.aspect-ratio>
+    <i18n.automatic>Automático</i18n.automatic>
+    <i18n.color-scheme>Esquema de cor</i18n.color-scheme>
+    <i18n.gamelist-position>Posición da lista de xogos</i18n.gamelist-position>
+    <i18n.left>Esquerda</i18n.left>
+    <i18n.right>Dereita</i18n.right>
+    <i18n.light>Claro</i18n.light>
+    <i18n.dark>Escuro</i18n.dark>
+    <i18n.game-media-type>Tipo de medio</i18n.game-media-type>
+    <i18n.image>Imaxe</i18n.image>
+    <i18n.boxart>Caixa</i18n.boxart>
+    <i18n.marquee>Logotipo</i18n.marquee>
+    <i18n.mix>Mixto</i18n.mix>
+    <i18n.play-video-previews>Reproducir vídeos de previsualización</i18n.play-video-previews>
+    <i18n.yes>Si</i18n.yes>
+    <i18n.no>Non</i18n.no>
+    <i18n.show-game-titles-in-grid>Mostrar o nome do xogo na grella</i18n.show-game-titles-in-grid>
+    <i18n.metadata-source>Orixe dos metadatos</i18n.metadata-source>
+    <i18n.theme>Tema</i18n.theme>
+    <i18n.use-svg-logos>Usar gráficos vectoriais para os logotipos</i18n.use-svg-logos>
+    <i18n.logo-region>Rexión dos logotipos</i18n.logo-region>
+    <i18n.europe>Europa</i18n.europe>
+    <i18n.usa>EUA</i18n.usa>
+    <i18n.japan>Xapón</i18n.japan>
+    <i18n.smooth-resize>Redimensionado suave</i18n.smooth-resize>
+    <i18n.distribution>Distribución</i18n.distribution>
+    <i18n.none>Ningunha</i18n.none>
+    <i18n.various>Varios</i18n.various>
+    <i18n.auto-collection>Colección automática</i18n.auto-collection>
+    <i18n.custom-collection>Colección personalizada</i18n.custom-collection>
+    <i18n.misc-system>Sistema misceláneo</i18n.misc-system>
+    <i18n.hardware-computer>Ordenador</i18n.hardware-computer>
+    <i18n.hardware-engine>Motor</i18n.hardware-engine>
+    <i18n.hardware-arcade>Arcade</i18n.hardware-arcade>
+    <i18n.hardware-portable>Portátil</i18n.hardware-portable>
+    <i18n.hardware-folder>Cartafol</i18n.hardware-folder>
+    <i18n.hardware-console>Consola</i18n.hardware-console>
+    <i18n.hardware-peripheral>Periférico</i18n.hardware-peripheral>
+    <i18n.hardware-emulator>Emulador</i18n.hardware-emulator>
+    <i18n.hardware-os>Sistema operativo</i18n.hardware-os>
+    <i18n.hardware-port>Port</i18n.hardware-port>
+    <i18n.helpbuttons>Posición dos botóns</i18n.helpbuttons>
+    <i18n.xboxbuttons>Estilo Xbox</i18n.xboxbuttons>
+    <i18n.snesbuttons>Estilo SNES</i18n.snesbuttons>
+    <i18n.psxbuttons>Estilo PlayStation</i18n.psxbuttons>
+    <i18n.standard>Estándar</i18n.standard>
+    <i18n.buttons6>Arcade 6 botóns</i18n.buttons6>
+    <i18n.buttons8>Arcade 8 botóns</i18n.buttons8>
+    <i18n.helpSubsetName>Estilo das etiquetas dos botóns</i18n.helpSubsetName>
+  </variables>
+  <variables lang="cs">
+    <systemDescription>Zobrazit a hrát ${system.fullName}.</systemDescription>
+    <i18n.aspect-ratio>Poměr stran</i18n.aspect-ratio>
+    <i18n.automatic>Automaticky</i18n.automatic>
+    <i18n.color-scheme>Barevné schéma</i18n.color-scheme>
+    <i18n.gamelist-position>Pozice seznamu her</i18n.gamelist-position>
+    <i18n.left>Vlevo</i18n.left>
+    <i18n.right>Vpravo</i18n.right>
+    <i18n.light>Světlé</i18n.light>
+    <i18n.dark>Tmavé</i18n.dark>
+    <i18n.game-media-type>Typ média hry</i18n.game-media-type>
+    <i18n.image>Obrázek</i18n.image>
+    <i18n.boxart>Obal</i18n.boxart>
+    <i18n.marquee>Logo</i18n.marquee>
+    <i18n.mix>Mix</i18n.mix>
+    <i18n.play-video-previews>Přehrávat video náhledy her</i18n.play-video-previews>
+    <i18n.yes>Ano</i18n.yes>
+    <i18n.no>Ne</i18n.no>
+    <i18n.show-game-titles-in-grid>Zobrazit názvy her v mřížce</i18n.show-game-titles-in-grid>
+    <i18n.metadata-source>Zdroj metadat</i18n.metadata-source>
+    <i18n.theme>Motiv</i18n.theme>
+    <i18n.use-svg-logos>Použít vektorovou grafiku pro loga</i18n.use-svg-logos>
+    <i18n.logo-region>Region log</i18n.logo-region>
+    <i18n.europe>Evropa</i18n.europe>
+    <i18n.usa>USA</i18n.usa>
+    <i18n.japan>Japonsko</i18n.japan>
+    <i18n.smooth-resize>Plynulá změna velikosti</i18n.smooth-resize>
+    <i18n.distribution>Distribuce</i18n.distribution>
+    <i18n.none>Žádná</i18n.none>
+    <i18n.various>Různé</i18n.various>
+    <i18n.auto-collection>Automatická kolekce</i18n.auto-collection>
+    <i18n.custom-collection>Vlastní kolekce</i18n.custom-collection>
+    <i18n.misc-system>Různý systém</i18n.misc-system>
+    <i18n.hardware-computer>Počítač</i18n.hardware-computer>
+    <i18n.hardware-engine>Herní engine</i18n.hardware-engine>
+    <i18n.hardware-arcade>Arkáda</i18n.hardware-arcade>
+    <i18n.hardware-portable>Přenosná</i18n.hardware-portable>
+    <i18n.hardware-folder>Složka</i18n.hardware-folder>
+    <i18n.hardware-console>Konzole</i18n.hardware-console>
+    <i18n.hardware-peripheral>Periferie</i18n.hardware-peripheral>
+    <i18n.hardware-emulator>Emulátor</i18n.hardware-emulator>
+    <i18n.hardware-os>OS</i18n.hardware-os>
+    <i18n.hardware-port>Port</i18n.hardware-port>
+    <i18n.helpbuttons>Rozložení tlačítek</i18n.helpbuttons>
+    <i18n.xboxbuttons>Styl Xbox</i18n.xboxbuttons>
+    <i18n.snesbuttons>Styl SNES</i18n.snesbuttons>
+    <i18n.psxbuttons>Styl PlayStation</i18n.psxbuttons>
+    <i18n.standard>Standardní</i18n.standard>
+    <i18n.buttons6>Arkáda 6 tlačítek</i18n.buttons6>
+    <i18n.buttons8>Arkáda 8 tlačítek</i18n.buttons8>
+    <i18n.helpSubsetName>Styl popisků tlačítek</i18n.helpSubsetName>
+  </variables>
+  <variables lang="sk">
+    <systemDescription>Zobraziť a hrať ${system.fullName}.</systemDescription>
+    <i18n.aspect-ratio>Pomer strán</i18n.aspect-ratio>
+    <i18n.automatic>Automaticky</i18n.automatic>
+    <i18n.color-scheme>Farebná schéma</i18n.color-scheme>
+    <i18n.gamelist-position>Pozícia zoznamu hier</i18n.gamelist-position>
+    <i18n.left>Vľavo</i18n.left>
+    <i18n.right>Vpravo</i18n.right>
+    <i18n.light>Svetlá</i18n.light>
+    <i18n.dark>Tmavá</i18n.dark>
+    <i18n.game-media-type>Typ média hry</i18n.game-media-type>
+    <i18n.image>Obrázok</i18n.image>
+    <i18n.boxart>Obal</i18n.boxart>
+    <i18n.marquee>Logo</i18n.marquee>
+    <i18n.mix>Mix</i18n.mix>
+    <i18n.play-video-previews>Prehrávať video náhľady hier</i18n.play-video-previews>
+    <i18n.yes>Áno</i18n.yes>
+    <i18n.no>Nie</i18n.no>
+    <i18n.show-game-titles-in-grid>Zobraziť názvy hier v mriežke</i18n.show-game-titles-in-grid>
+    <i18n.metadata-source>Zdroj metadát</i18n.metadata-source>
+    <i18n.theme>Téma</i18n.theme>
+    <i18n.use-svg-logos>Použiť vektorovú grafiku pre loga</i18n.use-svg-logos>
+    <i18n.logo-region>Región log</i18n.logo-region>
+    <i18n.europe>Európa</i18n.europe>
+    <i18n.usa>USA</i18n.usa>
+    <i18n.japan>Japonsko</i18n.japan>
+    <i18n.smooth-resize>Plynulá zmena veľkosti</i18n.smooth-resize>
+    <i18n.distribution>Distribúcia</i18n.distribution>
+    <i18n.none>Žiadna</i18n.none>
+    <i18n.various>Rôzne</i18n.various>
+    <i18n.auto-collection>Automatická kolekcia</i18n.auto-collection>
+    <i18n.custom-collection>Vlastná kolekcia</i18n.custom-collection>
+    <i18n.misc-system>Rôzny systém</i18n.misc-system>
+    <i18n.hardware-computer>Počítač</i18n.hardware-computer>
+    <i18n.hardware-engine>Herný engine</i18n.hardware-engine>
+    <i18n.hardware-arcade>Arkáda</i18n.hardware-arcade>
+    <i18n.hardware-portable>Prenosná</i18n.hardware-portable>
+    <i18n.hardware-folder>Priečinok</i18n.hardware-folder>
+    <i18n.hardware-console>Konzola</i18n.hardware-console>
+    <i18n.hardware-peripheral>Periféria</i18n.hardware-peripheral>
+    <i18n.hardware-emulator>Emulátor</i18n.hardware-emulator>
+    <i18n.hardware-os>OS</i18n.hardware-os>
+    <i18n.hardware-port>Port</i18n.hardware-port>
+    <i18n.helpbuttons>Rozloženie tlačidiel</i18n.helpbuttons>
+    <i18n.xboxbuttons>Štýl Xbox</i18n.xboxbuttons>
+    <i18n.snesbuttons>Štýl SNES</i18n.snesbuttons>
+    <i18n.psxbuttons>Štýl PlayStation</i18n.psxbuttons>
+    <i18n.standard>Štandardný</i18n.standard>
+    <i18n.buttons6>Arkáda 6 tlačidiel</i18n.buttons6>
+    <i18n.buttons8>Arkáda 8 tlačidiel</i18n.buttons8>
+    <i18n.helpSubsetName>Štýl popisov tlačidiel</i18n.helpSubsetName>
+  </variables>
+  <variables lang="hu">
+    <systemDescription>${system.fullName} megtekintése és játszása.</systemDescription>
+    <i18n.aspect-ratio>Képarány</i18n.aspect-ratio>
+    <i18n.automatic>Automatikus</i18n.automatic>
+    <i18n.color-scheme>Színséma</i18n.color-scheme>
+    <i18n.gamelist-position>Játéklista pozíciója</i18n.gamelist-position>
+    <i18n.left>Bal</i18n.left>
+    <i18n.right>Jobb</i18n.right>
+    <i18n.light>Világos</i18n.light>
+    <i18n.dark>Sötét</i18n.dark>
+    <i18n.game-media-type>Játék médiatípusa</i18n.game-media-type>
+    <i18n.image>Kép</i18n.image>
+    <i18n.boxart>Doboz</i18n.boxart>
+    <i18n.marquee>Logó</i18n.marquee>
+    <i18n.mix>Vegyes</i18n.mix>
+    <i18n.play-video-previews>Játékok videóelőnézetének lejátszása</i18n.play-video-previews>
+    <i18n.yes>Igen</i18n.yes>
+    <i18n.no>Nem</i18n.no>
+    <i18n.show-game-titles-in-grid>Játékcímek megjelenítése a rácsban</i18n.show-game-titles-in-grid>
+    <i18n.metadata-source>Metaadatok forrása</i18n.metadata-source>
+    <i18n.theme>Téma</i18n.theme>
+    <i18n.use-svg-logos>Vektorgrafika használata a logókhoz</i18n.use-svg-logos>
+    <i18n.logo-region>Logók régiója</i18n.logo-region>
+    <i18n.europe>Európa</i18n.europe>
+    <i18n.usa>USA</i18n.usa>
+    <i18n.japan>Japán</i18n.japan>
+    <i18n.smooth-resize>Sima átméretezés</i18n.smooth-resize>
+    <i18n.distribution>Disztribúció</i18n.distribution>
+    <i18n.none>Nincs</i18n.none>
+    <i18n.various>Vegyes</i18n.various>
+    <i18n.auto-collection>Automatikus gyűjtemény</i18n.auto-collection>
+    <i18n.custom-collection>Egyéni gyűjtemény</i18n.custom-collection>
+    <i18n.misc-system>Egyéb rendszer</i18n.misc-system>
+    <i18n.hardware-computer>Számítógép</i18n.hardware-computer>
+    <i18n.hardware-engine>Motor</i18n.hardware-engine>
+    <i18n.hardware-arcade>Arcade</i18n.hardware-arcade>
+    <i18n.hardware-portable>Hordozható</i18n.hardware-portable>
+    <i18n.hardware-folder>Mappa</i18n.hardware-folder>
+    <i18n.hardware-console>Konzol</i18n.hardware-console>
+    <i18n.hardware-peripheral>Periféria</i18n.hardware-peripheral>
+    <i18n.hardware-emulator>Emulátor</i18n.hardware-emulator>
+    <i18n.hardware-os>OS</i18n.hardware-os>
+    <i18n.hardware-port>Port</i18n.hardware-port>
+    <i18n.helpbuttons>Gombok elrendezése</i18n.helpbuttons>
+    <i18n.xboxbuttons>Xbox stílus</i18n.xboxbuttons>
+    <i18n.snesbuttons>SNES stílus</i18n.snesbuttons>
+    <i18n.psxbuttons>PlayStation stílus</i18n.psxbuttons>
+    <i18n.standard>Normál</i18n.standard>
+    <i18n.buttons6>Arcade 6 gomb</i18n.buttons6>
+    <i18n.buttons8>Arcade 8 gomb</i18n.buttons8>
+    <i18n.helpSubsetName>Gombfeliratok stílusa</i18n.helpSubsetName>
+  </variables>
+  <variables lang="el">
+    <systemDescription>Δείτε και παίξτε ${system.fullName}.</systemDescription>
+    <i18n.aspect-ratio>Λόγος διαστάσεων</i18n.aspect-ratio>
+    <i18n.automatic>Αυτόματο</i18n.automatic>
+    <i18n.color-scheme>Χρωματικό σχήμα</i18n.color-scheme>
+    <i18n.gamelist-position>Θέση λίστας παιχνιδιών</i18n.gamelist-position>
+    <i18n.left>Αριστερά</i18n.left>
+    <i18n.right>Δεξιά</i18n.right>
+    <i18n.light>Φωτεινό</i18n.light>
+    <i18n.dark>Σκούρο</i18n.dark>
+    <i18n.game-media-type>Τύπος πολυμέσων παιχνιδιού</i18n.game-media-type>
+    <i18n.image>Εικόνα</i18n.image>
+    <i18n.boxart>Εξώφυλλο</i18n.boxart>
+    <i18n.marquee>Λογότυπο</i18n.marquee>
+    <i18n.mix>Μικτό</i18n.mix>
+    <i18n.play-video-previews>Αναπαραγωγή βίντεο προεπισκόπησης παιχνιδιών</i18n.play-video-previews>
+    <i18n.yes>Ναι</i18n.yes>
+    <i18n.no>Όχι</i18n.no>
+    <i18n.show-game-titles-in-grid>Εμφάνιση τίτλων παιχνιδιών στο πλέγμα</i18n.show-game-titles-in-grid>
+    <i18n.metadata-source>Πηγή μεταδεδομένων</i18n.metadata-source>
+    <i18n.theme>Θέμα</i18n.theme>
+    <i18n.use-svg-logos>Χρήση διανυσματικών γραφικών για τα λογότυπα</i18n.use-svg-logos>
+    <i18n.logo-region>Περιοχή λογοτύπων</i18n.logo-region>
+    <i18n.europe>Ευρώπη</i18n.europe>
+    <i18n.usa>ΗΠΑ</i18n.usa>
+    <i18n.japan>Ιαπωνία</i18n.japan>
+    <i18n.smooth-resize>Ομαλή αλλαγή μεγέθους</i18n.smooth-resize>
+    <i18n.distribution>Διανομή</i18n.distribution>
+    <i18n.none>Καμία</i18n.none>
+    <i18n.various>Διάφορα</i18n.various>
+    <i18n.auto-collection>Αυτόματη συλλογή</i18n.auto-collection>
+    <i18n.custom-collection>Προσαρμοσμένη συλλογή</i18n.custom-collection>
+    <i18n.misc-system>Διάφορα συστήματα</i18n.misc-system>
+    <i18n.hardware-computer>Υπολογιστής</i18n.hardware-computer>
+    <i18n.hardware-engine>Μηχανή</i18n.hardware-engine>
+    <i18n.hardware-arcade>Arcade</i18n.hardware-arcade>
+    <i18n.hardware-portable>Φορητό</i18n.hardware-portable>
+    <i18n.hardware-folder>Φάκελος</i18n.hardware-folder>
+    <i18n.hardware-console>Κονσόλα</i18n.hardware-console>
+    <i18n.hardware-peripheral>Περιφερειακό</i18n.hardware-peripheral>
+    <i18n.hardware-emulator>Εξομοιωτής</i18n.hardware-emulator>
+    <i18n.hardware-os>Λειτουργικό σύστημα</i18n.hardware-os>
+    <i18n.hardware-port>Port</i18n.hardware-port>
+    <i18n.helpbuttons>Θέση κουμπιών</i18n.helpbuttons>
+    <i18n.xboxbuttons>Στυλ Xbox</i18n.xboxbuttons>
+    <i18n.snesbuttons>Στυλ SNES</i18n.snesbuttons>
+    <i18n.psxbuttons>Στυλ PlayStation</i18n.psxbuttons>
+    <i18n.standard>Τυπικό</i18n.standard>
+    <i18n.buttons6>Arcade 6 κουμπιά</i18n.buttons6>
+    <i18n.buttons8>Arcade 8 κουμπιά</i18n.buttons8>
+    <i18n.helpSubsetName>Στυλ ετικετών κουμπιών</i18n.helpSubsetName>
+  </variables>
+  <variables lang="fi">
+    <systemDescription>Katso ja pelaa: ${system.fullName}.</systemDescription>
+    <i18n.aspect-ratio>Kuvasuhde</i18n.aspect-ratio>
+    <i18n.automatic>Automaattinen</i18n.automatic>
+    <i18n.color-scheme>Värimalli</i18n.color-scheme>
+    <i18n.gamelist-position>Pelilistan sijainti</i18n.gamelist-position>
+    <i18n.left>Vasen</i18n.left>
+    <i18n.right>Oikea</i18n.right>
+    <i18n.light>Vaalea</i18n.light>
+    <i18n.dark>Tumma</i18n.dark>
+    <i18n.game-media-type>Pelin mediatyyppi</i18n.game-media-type>
+    <i18n.image>Kuva</i18n.image>
+    <i18n.boxart>Kansikuva</i18n.boxart>
+    <i18n.marquee>Logo</i18n.marquee>
+    <i18n.mix>Sekoitus</i18n.mix>
+    <i18n.play-video-previews>Toista pelien videoesikatselut</i18n.play-video-previews>
+    <i18n.yes>Kyllä</i18n.yes>
+    <i18n.no>Ei</i18n.no>
+    <i18n.show-game-titles-in-grid>Näytä pelien nimet ruudukossa</i18n.show-game-titles-in-grid>
+    <i18n.metadata-source>Metatietojen lähde</i18n.metadata-source>
+    <i18n.theme>Teema</i18n.theme>
+    <i18n.use-svg-logos>Käytä vektorigrafiikkaa logoissa</i18n.use-svg-logos>
+    <i18n.logo-region>Logojen alue</i18n.logo-region>
+    <i18n.europe>Eurooppa</i18n.europe>
+    <i18n.usa>USA</i18n.usa>
+    <i18n.japan>Japani</i18n.japan>
+    <i18n.smooth-resize>Tasainen koon muutos</i18n.smooth-resize>
+    <i18n.distribution>Jakelu</i18n.distribution>
+    <i18n.none>Ei mitään</i18n.none>
+    <i18n.various>Erilaiset</i18n.various>
+    <i18n.auto-collection>Automaattinen kokoelma</i18n.auto-collection>
+    <i18n.custom-collection>Mukautettu kokoelma</i18n.custom-collection>
+    <i18n.misc-system>Sekalainen järjestelmä</i18n.misc-system>
+    <i18n.hardware-computer>Tietokone</i18n.hardware-computer>
+    <i18n.hardware-engine>Moottori</i18n.hardware-engine>
+    <i18n.hardware-arcade>Arcade</i18n.hardware-arcade>
+    <i18n.hardware-portable>Kannettava</i18n.hardware-portable>
+    <i18n.hardware-folder>Kansio</i18n.hardware-folder>
+    <i18n.hardware-console>Konsoli</i18n.hardware-console>
+    <i18n.hardware-peripheral>Oheislaite</i18n.hardware-peripheral>
+    <i18n.hardware-emulator>Emulaattori</i18n.hardware-emulator>
+    <i18n.hardware-os>Käyttöjärjestelmä</i18n.hardware-os>
+    <i18n.hardware-port>Portti</i18n.hardware-port>
+    <i18n.helpbuttons>Painikkeiden sijainti</i18n.helpbuttons>
+    <i18n.xboxbuttons>Xbox-tyyli</i18n.xboxbuttons>
+    <i18n.snesbuttons>SNES-tyyli</i18n.snesbuttons>
+    <i18n.psxbuttons>PlayStation-tyyli</i18n.psxbuttons>
+    <i18n.standard>Vakio</i18n.standard>
+    <i18n.buttons6>Arcade 6 painiketta</i18n.buttons6>
+    <i18n.buttons8>Arcade 8 painiketta</i18n.buttons8>
+    <i18n.helpSubsetName>Painiketekstien tyyli</i18n.helpSubsetName>
+  </variables>
+  <variables lang="nb,no">
+    <systemDescription>Se og spill ${system.fullName}.</systemDescription>
+    <i18n.aspect-ratio>Sideforhold</i18n.aspect-ratio>
+    <i18n.automatic>Automatisk</i18n.automatic>
+    <i18n.color-scheme>Fargevalg</i18n.color-scheme>
+    <i18n.gamelist-position>Plassering av spillisten</i18n.gamelist-position>
+    <i18n.left>Venstre</i18n.left>
+    <i18n.right>Høyre</i18n.right>
+    <i18n.light>Lys</i18n.light>
+    <i18n.dark>Mørk</i18n.dark>
+    <i18n.game-media-type>Medietype for spill</i18n.game-media-type>
+    <i18n.image>Bilde</i18n.image>
+    <i18n.boxart>Coverbilde</i18n.boxart>
+    <i18n.marquee>Logo</i18n.marquee>
+    <i18n.mix>Blandet</i18n.mix>
+    <i18n.play-video-previews>Spill av videoforhåndsvisninger av spill</i18n.play-video-previews>
+    <i18n.yes>Ja</i18n.yes>
+    <i18n.no>Nei</i18n.no>
+    <i18n.show-game-titles-in-grid>Vis spilltitler i rutenettet</i18n.show-game-titles-in-grid>
+    <i18n.metadata-source>Metadatakilde</i18n.metadata-source>
+    <i18n.theme>Tema</i18n.theme>
+    <i18n.use-svg-logos>Bruk vektorgrafikk for logoer</i18n.use-svg-logos>
+    <i18n.logo-region>Logoregion</i18n.logo-region>
+    <i18n.europe>Europa</i18n.europe>
+    <i18n.usa>USA</i18n.usa>
+    <i18n.japan>Japan</i18n.japan>
+    <i18n.smooth-resize>Jevn størrelsesendring</i18n.smooth-resize>
+    <i18n.distribution>Distribusjon</i18n.distribution>
+    <i18n.none>Ingen</i18n.none>
+    <i18n.various>Diverse</i18n.various>
+    <i18n.auto-collection>Automatisk samling</i18n.auto-collection>
+    <i18n.custom-collection>Egendefinert samling</i18n.custom-collection>
+    <i18n.misc-system>Diverse system</i18n.misc-system>
+    <i18n.hardware-computer>Datamaskin</i18n.hardware-computer>
+    <i18n.hardware-engine>Motor</i18n.hardware-engine>
+    <i18n.hardware-arcade>Arkade</i18n.hardware-arcade>
+    <i18n.hardware-portable>Håndholdt</i18n.hardware-portable>
+    <i18n.hardware-folder>Mappe</i18n.hardware-folder>
+    <i18n.hardware-console>Konsoll</i18n.hardware-console>
+    <i18n.hardware-peripheral>Periferiutstyr</i18n.hardware-peripheral>
+    <i18n.hardware-emulator>Emulator</i18n.hardware-emulator>
+    <i18n.hardware-os>OS</i18n.hardware-os>
+    <i18n.hardware-port>Port</i18n.hardware-port>
+    <i18n.helpbuttons>Plassering av knapper</i18n.helpbuttons>
+    <i18n.xboxbuttons>Xbox-stil</i18n.xboxbuttons>
+    <i18n.snesbuttons>SNES-stil</i18n.snesbuttons>
+    <i18n.psxbuttons>PlayStation-stil</i18n.psxbuttons>
+    <i18n.standard>Standard</i18n.standard>
+    <i18n.buttons6>Arkade 6 knapper</i18n.buttons6>
+    <i18n.buttons8>Arkade 8 knapper</i18n.buttons8>
+    <i18n.helpSubsetName>Stil på knappeetiketter</i18n.helpSubsetName>
+  </variables>
+  <variables lang="uk">
+    <systemDescription>Переглядайте та грайте в ${system.fullName}.</systemDescription>
+    <i18n.aspect-ratio>Співвідношення сторін</i18n.aspect-ratio>
+    <i18n.automatic>Автоматично</i18n.automatic>
+    <i18n.color-scheme>Кольорова схема</i18n.color-scheme>
+    <i18n.gamelist-position>Розташування списку ігор</i18n.gamelist-position>
+    <i18n.left>Ліворуч</i18n.left>
+    <i18n.right>Праворуч</i18n.right>
+    <i18n.light>Світла</i18n.light>
+    <i18n.dark>Темна</i18n.dark>
+    <i18n.game-media-type>Тип медіа гри</i18n.game-media-type>
+    <i18n.image>Зображення</i18n.image>
+    <i18n.boxart>Обкладинка</i18n.boxart>
+    <i18n.marquee>Логотип</i18n.marquee>
+    <i18n.mix>Мікс</i18n.mix>
+    <i18n.play-video-previews>Відтворювати відеопрев'ю ігор</i18n.play-video-previews>
+    <i18n.yes>Так</i18n.yes>
+    <i18n.no>Ні</i18n.no>
+    <i18n.show-game-titles-in-grid>Показувати назви ігор у сітці</i18n.show-game-titles-in-grid>
+    <i18n.metadata-source>Джерело метаданих</i18n.metadata-source>
+    <i18n.theme>Тема</i18n.theme>
+    <i18n.use-svg-logos>Використовувати векторну графіку для логотипів</i18n.use-svg-logos>
+    <i18n.logo-region>Регіон логотипів</i18n.logo-region>
+    <i18n.europe>Європа</i18n.europe>
+    <i18n.usa>США</i18n.usa>
+    <i18n.japan>Японія</i18n.japan>
+    <i18n.smooth-resize>Плавна зміна розміру</i18n.smooth-resize>
+    <i18n.distribution>Дистрибутив</i18n.distribution>
+    <i18n.none>Немає</i18n.none>
+    <i18n.various>Різне</i18n.various>
+    <i18n.auto-collection>Автоматична колекція</i18n.auto-collection>
+    <i18n.custom-collection>Користувацька колекція</i18n.custom-collection>
+    <i18n.misc-system>Різна система</i18n.misc-system>
+    <i18n.hardware-computer>Комп'ютер</i18n.hardware-computer>
+    <i18n.hardware-engine>Рушій</i18n.hardware-engine>
+    <i18n.hardware-arcade>Аркада</i18n.hardware-arcade>
+    <i18n.hardware-portable>Портативна</i18n.hardware-portable>
+    <i18n.hardware-folder>Тека</i18n.hardware-folder>
+    <i18n.hardware-console>Консоль</i18n.hardware-console>
+    <i18n.hardware-peripheral>Периферія</i18n.hardware-peripheral>
+    <i18n.hardware-emulator>Емулятор</i18n.hardware-emulator>
+    <i18n.hardware-os>ОС</i18n.hardware-os>
+    <i18n.hardware-port>Порт</i18n.hardware-port>
+    <i18n.helpbuttons>Розташування кнопок</i18n.helpbuttons>
+    <i18n.xboxbuttons>Стиль Xbox</i18n.xboxbuttons>
+    <i18n.snesbuttons>Стиль SNES</i18n.snesbuttons>
+    <i18n.psxbuttons>Стиль PlayStation</i18n.psxbuttons>
+    <i18n.standard>Стандартний</i18n.standard>
+    <i18n.buttons6>Аркада 6 кнопок</i18n.buttons6>
+    <i18n.buttons8>Аркада 8 кнопок</i18n.buttons8>
+    <i18n.helpSubsetName>Стиль підписів кнопок</i18n.helpSubsetName>
   </variables>
 </theme>

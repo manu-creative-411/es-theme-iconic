@@ -15,7 +15,18 @@ It displays a mixin of the game images, above the game metadata.
       <linearSmooth>true</linearSmooth>
     </image>
     <image name="logo">
+      <!-- Bitmap logos (always loaded; vector logos below take precedence when enabled). Same organization as the SVG ones. -->
       <path>./_inc/logos/${system.theme}.webp</path>
+      <path>./_inc/logos/${system.theme}-${logoRegion}.webp</path>
+      <path>./_inc/logos/${system.theme}/jp.webp</path>
+      <path>./_inc/logos/${system.theme}/${logoColorScheme}-jp.webp</path>
+      <path>./_inc/logos/${system.theme}/us.webp</path>
+      <path>./_inc/logos/${system.theme}/${logoColorScheme}-us.webp</path>
+      <path>./_inc/logos/${system.theme}/eu.webp</path>
+      <path>./_inc/logos/${system.theme}/${logoColorScheme}-eu.webp</path>
+      <path>./_inc/logos/${system.theme}/${logoColorScheme}.webp</path>
+      <path>./_inc/logos/${system.theme}/${logoRegion}.webp</path>
+      <path>./_inc/logos/${system.theme}/${logoColorScheme}-${logoRegion}.webp</path>
       <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}.svg</path>
       <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}-${logoRegion}.svg</path>
       <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}/jp.svg</path>

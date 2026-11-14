@@ -17,6 +17,10 @@
 * Add controllers status icons in carrousel (thanks [Manu](https://github.com/manutortosa-collab)).
 * Simplfy the customization of theme backgrounds (thanks [Manu](https://github.com/manutortosa-collab)).
 * Fix automatic collections not dynamically populating the games list (thanks [Manu](https://github.com/manutortosa-collab)).
+* The theme options are now translated into Basque, Galician, Czech, Slovak, Hungarian, Greek, Finnish, Norwegian and Ukrainian, in addition to the existing languages. The options added later (`Game List Position`, buttons style) were missing in every language except Spanish: they are now translated everywhere, and the `Standard` button style label, which had no text at all, has been added.
+* The dark color scheme and the vector (SVG) logos are now the defaults.
+* Fix the splash screen showing the EmuELEC artwork (and the light color scheme) while the `Distribution` and `Color Scheme` options had never been changed: `splash.xml` did not declare the default value of those options, so every `ifSubset` was true and the last one won. With `None`, the default splash artwork is now used.
+* Bitmap logos now follow the same organization as the vector ones: `_inc/logos/<system>/<scheme>[-<region>].webp`, `<region>.webp` and `<system>-<region>.webp` are supported, with the same precedence rules. The variants of every system that already had them in `_inc/logos-svg/` have been generated with the new `_tools/make_bitmap_logos.py`.
 
 
 

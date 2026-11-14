@@ -7,7 +7,18 @@ vertically on the left side of the screen.
   <formatVersion>7</formatVersion>
   <view name="system">
     <image name="logo">
+      <!-- Bitmap logos (always loaded; vector logos below take precedence when enabled). Same organization as the SVG ones. -->
       <path>./_inc/logos/${system.theme}.webp</path>
+      <path>./_inc/logos/${system.theme}-${logoRegion}.webp</path>
+      <path>./_inc/logos/${system.theme}/jp.webp</path>
+      <path>./_inc/logos/${system.theme}/${logoColorScheme}-jp.webp</path>
+      <path>./_inc/logos/${system.theme}/us.webp</path>
+      <path>./_inc/logos/${system.theme}/${logoColorScheme}-us.webp</path>
+      <path>./_inc/logos/${system.theme}/eu.webp</path>
+      <path>./_inc/logos/${system.theme}/${logoColorScheme}-eu.webp</path>
+      <path>./_inc/logos/${system.theme}/${logoColorScheme}.webp</path>
+      <path>./_inc/logos/${system.theme}/${logoRegion}.webp</path>
+      <path>./_inc/logos/${system.theme}/${logoColorScheme}-${logoRegion}.webp</path>
       <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}.svg</path>
       <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}-${logoRegion}.svg</path>
       <path ifSubset="use-svg-logos:yes">./_inc/logos-svg/${system.theme}/jp.svg</path>
@@ -46,8 +57,8 @@ vertically on the left side of the screen.
             <path>{system:logo}</path>
           </image>
           <text name="logo-text-fallback">
-            <visible ifSubset="use-svg-logos:no">!exists("${themePath}/_inc/logos/" + {system:theme} + ".webp")</visible>
-            <visible ifSubset="use-svg-logos:yes">firstfile("${themePath}/_inc/logos/" + {system:theme} + ".webp", "${themePath}/_inc/logos-svg/" + {system:theme} + ".svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "-${logoRegion}.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/jp.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}-jp.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/us.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}-us.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/eu.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}-eu.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoRegion}.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}-${logoRegion}.svg") == ""</visible>
+            <visible ifSubset="use-svg-logos:no">firstfile("${themePath}/_inc/logos/" + {system:theme} + ".webp", "${themePath}/_inc/logos/" + {system:theme} + "-${logoRegion}.webp", "${themePath}/_inc/logos/" + {system:theme} + "/jp.webp", "${themePath}/_inc/logos/" + {system:theme} + "/${logoColorScheme}-jp.webp", "${themePath}/_inc/logos/" + {system:theme} + "/us.webp", "${themePath}/_inc/logos/" + {system:theme} + "/${logoColorScheme}-us.webp", "${themePath}/_inc/logos/" + {system:theme} + "/eu.webp", "${themePath}/_inc/logos/" + {system:theme} + "/${logoColorScheme}-eu.webp", "${themePath}/_inc/logos/" + {system:theme} + "/${logoColorScheme}.webp", "${themePath}/_inc/logos/" + {system:theme} + "/${logoRegion}.webp", "${themePath}/_inc/logos/" + {system:theme} + "/${logoColorScheme}-${logoRegion}.webp") == ""</visible>
+            <visible ifSubset="use-svg-logos:yes">firstfile("${themePath}/_inc/logos/" + {system:theme} + ".webp", "${themePath}/_inc/logos/" + {system:theme} + "-${logoRegion}.webp", "${themePath}/_inc/logos/" + {system:theme} + "/jp.webp", "${themePath}/_inc/logos/" + {system:theme} + "/${logoColorScheme}-jp.webp", "${themePath}/_inc/logos/" + {system:theme} + "/us.webp", "${themePath}/_inc/logos/" + {system:theme} + "/${logoColorScheme}-us.webp", "${themePath}/_inc/logos/" + {system:theme} + "/eu.webp", "${themePath}/_inc/logos/" + {system:theme} + "/${logoColorScheme}-eu.webp", "${themePath}/_inc/logos/" + {system:theme} + "/${logoColorScheme}.webp", "${themePath}/_inc/logos/" + {system:theme} + "/${logoRegion}.webp", "${themePath}/_inc/logos/" + {system:theme} + "/${logoColorScheme}-${logoRegion}.webp", "${themePath}/_inc/logos-svg/" + {system:theme} + ".svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "-${logoRegion}.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/jp.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}-jp.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/us.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}-us.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/eu.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}-eu.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoRegion}.svg", "${themePath}/_inc/logos-svg/" + {system:theme} + "/${logoColorScheme}-${logoRegion}.svg") == ""</visible>
             <value>{system:fullName}</value>
             <forceUppercase>true</forceUppercase>
             <lineSpacing>1</lineSpacing>

@@ -34,14 +34,14 @@ The following options can be changed directly from the main menu under `User Int
 | Setting | Description | Options |
 | -- | -- | -- |
 | Aspect Ratio | Enables you to select the correct aspect ratio for your screen. This will automatically set itself so you should not need to change it but if the theme layout looks odd or spacing looks incorrect you can use this setting to make sure the aspect ratio matches your screen. | `Automatic`, `16:9`, `16:10`, `4:3`, `3:2`, `1:1` |
-| Color Scheme | Sets the color scheme that is used for the theme. | `Light`, `Dark` |
+| Color Scheme | Sets the color scheme that is used for the theme. | `Dark` (default), `Light` |
 | Game List Position | Side of the screen where the game list (or grid) is displayed in the `basic`, `detailed` and `grid` views. With `Left`, the game list and the info area (system logo or game details) are swapped. The `Full Grid` view is not affected. | `Right`, `Left` |
 | Game Media Type | Selects the desired type of image displayed above game details. | `Boxart`, `Image`, `Marquee`, `Mix` |
 | Play Video Previews of Games | Toggles the video previews above game details (if available). | `Yes`, `No` |
 | Show Game Titles in Grid | Toggles the display of game titles in the grid view. | `No`, `Yes` |
 | Metadata Source | Selects the primary source of metadata (name, release year, etc.) to associate with each systems. | `Theme`, `EmulationStation` |
-| Use Vector Graphics for Logos | Load system logos as SVG for sharper and scalable graphics. It may require slightly more computing resources and produce artefacts. For each system, `_inc/logos-svg/<system>/light.svg` or `dark.svg` (matching the color scheme) is used first, then `_inc/logos-svg/<system>.svg`, then the bitmap logo. | `No`, `Yes` |
-| Logo Region | Selects the regional variant of the logos when using vector graphics (see below). | `Europe`, `USA`, `Japan` |
+| Use Vector Graphics for Logos | Load system logos as SVG for sharper and scalable graphics. It may require slightly more computing resources and produce artefacts. When a vector logo does not exist for a system, its bitmap logo is used. Bitmap and vector logos share the same organization (see below). | `Yes` (default), `No` |
+| Logo Region | Selects the regional variant of the logos, both vector and bitmap (see below). | `Europe`, `USA`, `Japan` |
 | Smooth Resize | Toggles the use of smooth resizing for images. Disabling this may lead to better looking images, but it requires the VRAM optimizations to be disabled in the settings as well. | `Yes`, `No` |
 | Distribution | Used to define which folder to look in for theme customization files (see below) and which splash screen branding to load from `_inc/splash/<distribution>.svg` or `.png`. | `None`, `Batocera`, `Knulli`, `RetroBat`, `ROCKNIX`, `Retrobox`, `Recalbox`, `RetroPie`, `EmuELEC` |
 
@@ -86,25 +86,30 @@ Custom overlays can be added to help make images pop.
 
 ### Regional and Light/Dark Logos
 
-When `Use Vector Graphics for Logos` is enabled, the logo of each system is looked up in `_inc/logos-svg/`. A system can have a folder `_inc/logos-svg/<system>/` with any of these files:
+The logo of each system is looked up in `_inc/logos-svg/` (vector, when `Use Vector Graphics for Logos` is enabled) and in `_inc/logos/` (bitmap, `.webp`). **Both folders are organized exactly the same way**, so the color scheme and the region are honored whether vector graphics are enabled or not. A system can have a folder `_inc/logos-svg/<system>/` (or `_inc/logos/<system>/`) with any of these files:
 
-* `<scheme>-<region>.svg` (e.g. `dark-jp.svg`): for that color scheme and region only.
-* `<region>.svg` (e.g. `us.svg`): for that region, in both light and dark.
-* `<scheme>.svg` (e.g. `dark.svg`): for that color scheme, in any region.
+* `<scheme>-<region>.<ext>` (e.g. `dark-jp.svg`): for that color scheme and region only.
+* `<region>.<ext>` (e.g. `us.svg`): for that region, in both light and dark.
+* `<scheme>.<ext>` (e.g. `dark.svg`): for that color scheme, in any region.
 
-`<scheme>` is `light` or `dark` according to the `Color Scheme` setting, and `<region>` is `eu`, `us` or `jp` according to the `Logo Region` setting (`eu` by default).
+`<ext>` is `svg` in `_inc/logos-svg/` and `webp` in `_inc/logos/`. `<scheme>` is `light` or `dark` according to the `Color Scheme` setting, and `<region>` is `eu`, `us` or `jp` according to the `Logo Region` setting (`eu` by default).
 
-The first file found in this list (from highest to lowest precedence) is used:
+Within each folder, the first file found in this list (from highest to lowest precedence) is used:
 
-1. `<system>/<scheme>-<region>.svg`
-2. `<system>/<region>.svg`
-3. `<system>/<scheme>.svg`
-4. For the other regions, in the order `eu`, `us`, `jp`: `<system>/<scheme>-<other>.svg`, then `<system>/<other>.svg`
-5. `<system>-<region>.svg`
-6. `<system>.svg`
-7. The bitmap logo in `_inc/logos/<system>.webp`
+1. `<system>/<scheme>-<region>.<ext>`
+2. `<system>/<region>.<ext>`
+3. `<system>/<scheme>.<ext>`
+4. For the other regions, in the order `eu`, `us`, `jp`: `<system>/<scheme>-<other>.<ext>`, then `<system>/<other>.<ext>`
+5. `<system>-<region>.<ext>`
+6. `<system>.<ext>`
 
-If none exists, the system name is displayed as text.
+When vector graphics are enabled, any vector logo takes precedence over any bitmap one; the bitmap logos are the fallback. If no logo exists at all, the system name is displayed as text.
+
+The bitmap variants inside the system folders can be (re)generated from their vector counterpart with `_tools/make_bitmap_logos.py` (existing bitmaps are never overwritten unless `--force` is given). The top-level `_inc/logos/<system>.webp` files remain required for every system.
+
+### Languages
+
+The theme options (and the texts of the theme itself) are translated into the languages supported by EmulationStation, selected from the language of the system: Arabic, Basque, Bosnian, Catalan, Croatian, Czech, Dutch, English, Finnish, French, Galician, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian (Bokm&aring;l), Polish, Portuguese, Romanian, Russian, Serbian, Slovak, Spanish, Swedish, Ukrainian and Chinese. The long description of each system is only available in the languages that have a `<variables lang="...">` block in its `_inc/metadata/<system>.xml` file; for the others (Basque, Galician, Czech, Slovak, Hungarian, Greek, Finnish, Norwegian and Ukrainian for now) the English description is displayed.
 
 ### Full Grid View
 

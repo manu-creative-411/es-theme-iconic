@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
     <formatVersion>7</formatVersion>
+    <!-- Default values of the subsets used below. Keep in sync with "_inc/ui-components/theme-config.xml".
+         The splash view is loaded on its own, without "theme-config.xml", so without these declarations
+         EmulationStation does not know the defaults: as long as the user has not changed a setting,
+         EVERY "ifSubset" evaluates to true and the last matching block wins (that is how the EmuELEC
+         background and the light scheme were being picked when "Distribution" was left on "None").
+         The first <include> of a subset is its default value. -->
+    <subset name="color-scheme">
+        <include name="dark"/>
+        <include name="light"/>
+    </subset>
+    <subset name="distribution">
+        <include name="none"/>
+        <include name="batocera"/>
+        <include name="knulli"/>
+        <include name="retrobat"/>
+        <include name="rocknix"/>
+        <include name="retrobox"/>
+        <include name="recalbox"/>
+        <include name="retropie"/>
+        <include name="emuelec"/>
+    </subset>
     <!-- We do not re-use "theme-variables.xml" because it generates "ERROR" logs (although it works). -->
     <variables ifSubset="color-scheme:dark">
         <backgroudOverlayImage>overlay-dark.png</backgroudOverlayImage>
