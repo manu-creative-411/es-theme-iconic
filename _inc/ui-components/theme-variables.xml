@@ -77,8 +77,10 @@ here are then used by the UI components to adjust the appearance of the theme.
   </variables>
   <!-- Font sizes of the elements laid out in a fixed space (see "fixedLayoutFontFactor"). -->
   <variables>
-    <!-- Game details: metadata fields (over the pills of the panel). -->
-    <gameMetadataFontSize>0.024 * ${fixedLayoutFontFactor}</gameMetadataFontSize>
+    <!-- Game details: metadata fields. The pills they sit on are part of the panel image and never grow,
+      so these fields always keep their size at 100% (the font scale is compensated): any bigger, the text
+      fills the pills too tightly. -->
+    <gameMetadataFontSize>0.024 / ${esFontScale}</gameMetadataFontSize>
     <!-- Grid: game titles below the tiles. -->
     <gridTitleFontSize>0.024 * ${fixedLayoutFontFactor}</gridTitleFontSize>
     <!-- System view: stacked headers of the system info panel. -->

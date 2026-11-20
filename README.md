@@ -53,9 +53,11 @@ distributions based on the same EmulationStation), which makes every text bigger
 layout:
 
 - The game list shows fewer rows (see `Game List Rows`), with matching row separators.
-- Texts laid out in a fixed space (game metadata over the pills of the game details panel, headers of
-  the system view, game titles of the grid) grow up to the `133%` scale, and no further, so that they do
-  not overlap their neighbours. Scrolling texts (descriptions) keep growing.
+- The game metadata over the pills of the game details panel always keeps its size at `100%`: the pills
+  are part of the panel image and do not grow with the text.
+- Other texts laid out in a fixed space (headers of the system view, game titles of the grid) grow up to
+  the `133%` scale, and no further, so that they do not overlap their neighbours. Scrolling texts
+  (descriptions) keep growing.
 - The help prompts and status indicators of the bottom bar stay centered on the same line, and the
   help prompts of the system view move to the left side when the scale is above `133%`.
 
