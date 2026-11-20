@@ -1,6 +1,8 @@
 <!-- This component defines the right half of the screen (left half if "Game List Position" is "Left") in "basic" and "detailed" views.
 
-It displays a list of the games of the system being viewed.
+It displays a list of the games of the system being viewed. Its number of rows and font size depend on
+the "Game List Rows" option and on the font scale (see "theme-variables.xml"). The panel image has the
+row separators baked in, so there is one per number of rows.
 -->
 <theme>
   <formatVersion>7</formatVersion>
@@ -11,8 +13,8 @@ It displays a list of the games of the system being viewed.
       <size>1 1</size>
       <zIndex>12</zIndex>
       <linearSmooth>true</linearSmooth>
-      <path>./_inc/other/${gamelistPanelImage}</path>
-      <path ifSubset="gamelist-position:left">./_inc/other/gamelist-panel-${logoColorScheme}-left.png</path>
+      <path>./_inc/other/gamelist-rows/${gamelistRows}/gamelist-panel-${logoColorScheme}.png</path>
+      <path ifSubset="gamelist-position:left">./_inc/other/gamelist-rows/${gamelistRows}/gamelist-panel-${logoColorScheme}-left.png</path>
     </image>
     <textlist name="gamelist">
       <fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
@@ -24,8 +26,8 @@ It displays a list of the games of the system being viewed.
       <zIndex>17</zIndex>
       <pos>${gamelistX} 0.09</pos>
       <size>0.362 0.7519</size>
-      <fontSize>0.030333333333333</fontSize>
-      <lines>15</lines>
+      <fontSize>${gamelistFontSize}</fontSize>
+      <lines>${gamelistRows}</lines>
       <alignment>left</alignment>
       <scrollSound>./_inc/sounds/scroll.wav</scrollSound>
 

@@ -26,9 +26,10 @@ It should be visible from all views and z-rendered above the bottom bar.
   </view>
   <view name="system, basic, detailed, grid">
     <stackpanel name="status-indicators" extra="true">
-      <h>0.022</h>
+      <!-- Height and position follow the font scale (see "statusIndicatorsHeight" in "theme-variables.xml"). -->
+      <h>${statusIndicatorsHeight}</h>
       <w>1</w>
-      <pos>-0.0075 0.971</pos>
+      <pos>-0.0075 ${statusIndicatorsY}</pos>
       <separator>0.012</separator>
       <zIndex>100</zIndex>
       <orientation>horizontal</orientation>

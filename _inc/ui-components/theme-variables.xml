@@ -5,6 +5,90 @@ here are then used by the UI components to adjust the appearance of the theme.
 -->
 <theme>
   <formatVersion>7</formatVersion>
+  <!-- Font scale ("Theme Font Scale" in the EmulationStation UI settings of Batocera, Retrobox...).
+
+    EmulationStation multiplies every "fontSize" of the theme by this factor, but nothing else: the
+    elements keep their size and position, and baked-in backgrounds (such as the separators of the game
+    list panel) do not move. The variables below let the theme react to it.
+
+    The setting is exposed as "${settings.FontScale}", but only once it has been changed in the menu
+    (the variable does not exist otherwise, and using it directly in an "if" logs an error for each
+    system). Resolving it into a variable first falls back silently to an empty value instead. When it is
+    empty ("Auto") or out of range, EmulationStation derives the factor from the screen size: the same
+    logic is reproduced here (see "Renderer::ScreenSettings::fontScale()").
+  -->
+  <variables>
+    <esFontScale>${settings.FontScale}</esFontScale>
+  </variables>
+  <variables if="${esFontScale} &lt;= 0 || ${esFontScale} &gt;= 4">
+    <esFontScale>1</esFontScale>
+    <esFontScale if="${screen.width} &lt; 720 || ${screen.height} &lt; 720">1.31</esFontScale>
+    <esFontScale if="${screen.width} &lt; 320 || ${screen.height} &lt; 320">1.5</esFontScale>
+  </variables>
+  <!-- Elements laid out in a fixed space (metadata fields over the pills of the game details panel,
+    stacked headers of the system view...) overlap their neighbours when their text grows too much. Their
+    font size is multiplied by this factor, so that they never grow beyond the "maxFixedLayoutFontScale"
+    (the largest scale they were checked with). Below it, the factor is 1 and nothing changes. -->
+  <variables>
+    <maxFixedLayoutFontScale>1.31</maxFixedLayoutFontScale>
+    <fixedLayoutFontFactor>${esFontScale} &gt; ${maxFixedLayoutFontScale} ? ${maxFixedLayoutFontScale} / ${esFontScale} : 1</fixedLayoutFontFactor>
+  </variables>
+  <!-- Config: Game List Rows.
+
+    The game list has a fixed number of rows ("lines"), so a bigger font only makes the text crowd the
+    rows. Instead, the number of rows is reduced when the font scale grows ("Automatic": about 15 rows
+    divided by the scale, rounded to one of the values below), or fixed by the user.
+
+    The font size is then derived from the number of rows, compensating the font scale applied by
+    EmulationStation: the text always fills its row in the same proportion as the original design
+    (15 rows, font size of 0.030333). With "Automatic", the text ends up about as big as the font scale
+    asks for; with a fixed number of rows, the rows alone determine its size.
+
+    Each value needs its own panel image (the separators are part of it), generated in
+    "_inc/other/gamelist-rows/<rows>/" by "_tools/make_gamelist_panels.py".
+  -->
+  <variables ifSubset="gamelist-rows:auto">
+    <gamelistRows>20</gamelistRows>
+    <gamelistRows if="${esFontScale} &gt;= 0.875">15</gamelistRows>
+    <gamelistRows if="${esFontScale} &gt;= 1.05">14</gamelistRows>
+    <gamelistRows if="${esFontScale} &gt;= 1.175">12</gamelistRows>
+    <gamelistRows if="${esFontScale} &gt;= 1.28">11</gamelistRows>
+    <gamelistRows if="${esFontScale} &gt;= 1.4">10</gamelistRows>
+    <gamelistRows if="${esFontScale} &gt;= 1.625">9</gamelistRows>
+    <gamelistRows if="${esFontScale} &gt;= 1.875">8</gamelistRows>
+  </variables>
+  <variables>
+    <gamelistRows ifSubset="gamelist-rows:20">20</gamelistRows>
+    <gamelistRows ifSubset="gamelist-rows:18">18</gamelistRows>
+    <gamelistRows ifSubset="gamelist-rows:15">15</gamelistRows>
+    <gamelistRows ifSubset="gamelist-rows:14">14</gamelistRows>
+    <gamelistRows ifSubset="gamelist-rows:13">13</gamelistRows>
+    <gamelistRows ifSubset="gamelist-rows:12">12</gamelistRows>
+    <gamelistRows ifSubset="gamelist-rows:11">11</gamelistRows>
+    <gamelistRows ifSubset="gamelist-rows:10">10</gamelistRows>
+    <gamelistRows ifSubset="gamelist-rows:9">9</gamelistRows>
+    <gamelistRows ifSubset="gamelist-rows:8">8</gamelistRows>
+  </variables>
+  <variables>
+    <gamelistFontSize>0.030333333333333 * 15 / ${gamelistRows} / ${esFontScale}</gamelistFontSize>
+  </variables>
+  <!-- Font sizes of the elements laid out in a fixed space (see "fixedLayoutFontFactor"). -->
+  <variables>
+    <!-- Game details: metadata fields (over the pills of the panel). -->
+    <gameMetadataFontSize>0.024 * ${fixedLayoutFontFactor}</gameMetadataFontSize>
+    <!-- Grid: game titles below the tiles. -->
+    <gridTitleFontSize>0.024 * ${fixedLayoutFontFactor}</gridTitleFontSize>
+    <!-- System view: stacked headers of the system info panel. -->
+    <systemNameFontSize>0.036777777777778 * ${fixedLayoutFontFactor}</systemNameFontSize>
+    <systemManufacturerFontSize>0.019 * ${fixedLayoutFontFactor}</systemManufacturerFontSize>
+    <systemHeaderFontSize>0.024 * ${fixedLayoutFontFactor}</systemHeaderFontSize>
+  </variables>
+  <!-- Bottom bar: the status indicators grow with the font scale (their icons follow the height of the
+    panel), and stay centered on the same line as the help prompts. -->
+  <variables>
+    <statusIndicatorsHeight>0.022 * ${esFontScale}</statusIndicatorsHeight>
+    <statusIndicatorsY>0.982 - ${statusIndicatorsHeight} / 2</statusIndicatorsY>
+  </variables>
   <!-- Config: Play Video Previews of Games. -->
   <variables>
     <playVideoPreviewOfGames ifSubset="play-video-previews-of-games:yes">true</playVideoPreviewOfGames>
@@ -83,7 +167,6 @@ here are then used by the UI components to adjust the appearance of the theme.
     <bottomBarImage>bottom-bar-dark.png</bottomBarImage>
     <backgroudOverlayImage>overlay-dark.png</backgroudOverlayImage>
     <systemInfoPanelImage>system-info-panel-dark.png</systemInfoPanelImage>
-    <gamelistPanelImage>gamelist-panel-dark.png</gamelistPanelImage>
     <gameDetailsPanelImage>game-details-panel-dark.png</gameDetailsPanelImage>
     <systemInfoColor>cccccc</systemInfoColor>
     <systemManufacturerColor>adadad</systemManufacturerColor>
@@ -111,7 +194,6 @@ here are then used by the UI components to adjust the appearance of the theme.
     <bottomBarImage>bottom-bar-light.png</bottomBarImage>
     <backgroudOverlayImage>overlay-light.png</backgroudOverlayImage>
     <systemInfoPanelImage>system-info-panel-light.png</systemInfoPanelImage>
-    <gamelistPanelImage>gamelist-panel-light.png</gamelistPanelImage>
     <gameDetailsPanelImage>game-details-panel-light.png</gameDetailsPanelImage>
     <systemInfoColor>555555</systemInfoColor>
     <systemManufacturerColor>6e6e6e</systemManufacturerColor>

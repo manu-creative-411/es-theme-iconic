@@ -3,8 +3,10 @@
 	<formatVersion>7</formatVersion>
 	<view name="screen, system, basic, detailed, grid">
 		<helpsystem name="help">
-			<origin>0 0</origin>
-			<pos>0.01 0.974</pos>
+			<!-- Vertically centered on the line of the status indicators, so that a bigger font scale grows
+			     both ways instead of pushing the prompts below the bottom of the screen. -->
+			<origin>0 0.5</origin>
+			<pos>0.01 0.9825</pos>
 			<fontSize>0.02</fontSize>
 			<textColor>${helpTextColor}</textColor>
 			<iconColor>${helpIconColor}</iconColor>
@@ -17,9 +19,11 @@
     -->
 	<view name="system">
 		<helpsystem name="help" ifSubset="aspect-ratio:16-9|16-9-auto|16-10|16-10-auto">
-			<pos>0.48 0.974</pos>
+			<pos>0.48 0.9825</pos>
 			<!-- Retrobat and Retrobox have more help text, and it would overlap with the hour. -->
-			<pos ifSubset="distribution:retrobat|retrobox">0.01 0.974</pos>
+			<pos ifSubset="distribution:retrobat|retrobox">0.01 0.9825</pos>
+			<!-- Same with a big font scale (see "theme-variables.xml"). -->
+			<pos if="${esFontScale} &gt; ${maxFixedLayoutFontScale}">0.01 0.9825</pos>
 		</helpsystem>
 	</view>
 </theme>

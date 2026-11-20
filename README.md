@@ -36,6 +36,7 @@ The following options can be changed directly from the main menu under `User Int
 | Aspect Ratio | Enables you to select the correct aspect ratio for your screen. This will automatically set itself so you should not need to change it but if the theme layout looks odd or spacing looks incorrect you can use this setting to make sure the aspect ratio matches your screen. | `Automatic`, `16:9`, `16:10`, `4:3`, `3:2`, `1:1` |
 | Color Scheme | Sets the color scheme that is used for the theme. | `Dark` (default), `Light` |
 | Game List Position | Side of the screen where the game list (or grid) is displayed in the `basic`, `detailed` and `grid` views. With `Left`, the game list and the info area (system logo or game details) are swapped. The `Full Grid` view is not affected. | `Right`, `Left` |
+| Game List Rows | Number of rows of the game list in the `basic` and `detailed` views. The font size follows the rows, so the text always fills them in the same proportion. With `Automatic`, the number of rows is derived from the `Theme Font Scale` of EmulationStation (15 rows at 100%, 12 at 125%, 10 at 150%, 8 at 200%...), so that a bigger font shows fewer games instead of crowding the list. | `Automatic` (default), `20`, `18`, `15`, `14`, `13`, `12`, `11`, `10`, `9`, `8` |
 | Game Media Type | Selects the desired type of image displayed above game details. | `Boxart`, `Image`, `Marquee`, `Mix` |
 | Play Video Previews of Games | Toggles the video previews above game details (if available). | `Yes`, `No` |
 | Show Game Titles in Grid | Toggles the display of game titles in the grid view. | `No`, `Yes` |
@@ -44,6 +45,23 @@ The following options can be changed directly from the main menu under `User Int
 | Logo Region | Selects the regional variant of the logos, both vector and bitmap (see below). | `Europe`, `USA`, `Japan` |
 | Smooth Resize | Toggles the use of smooth resizing for images. Disabling this may lead to better looking images, but it requires the VRAM optimizations to be disabled in the settings as well. | `Yes`, `No` |
 | Distribution | Used to define which folder to look in for theme customization files (see below) and which splash screen branding to load from `_inc/splash/<distribution>.svg` or `.png`. | `None`, `Batocera`, `Knulli`, `RetroBat`, `ROCKNIX`, `Retrobox`, `Recalbox`, `RetroPie`, `EmuELEC` |
+
+### Font Scale
+
+The theme adapts to the `Theme Font Scale` setting of EmulationStation (Batocera, Retrobox and other
+distributions based on the same EmulationStation), which makes every text bigger without changing the
+layout:
+
+- The game list shows fewer rows (see `Game List Rows`), with matching row separators.
+- Texts laid out in a fixed space (game metadata over the pills of the game details panel, headers of
+  the system view, game titles of the grid) grow up to the `133%` scale, and no further, so that they do
+  not overlap their neighbours. Scrolling texts (descriptions) keep growing.
+- The help prompts and status indicators of the bottom bar stay centered on the same line, and the
+  help prompts of the system view move to the left side when the scale is above `133%`.
+
+The theme can only read this setting once it has been changed in the EmulationStation menu: with
+`Auto`, the scale is derived from the screen size as EmulationStation does (`131%` below 720p, `150%`
+below 320p). The change requires a restart of EmulationStation.
 
 ## Customization
 

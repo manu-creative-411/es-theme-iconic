@@ -62,7 +62,7 @@ It displays a grid of the boxart images of the games of the system being viewed.
       <visible>${showGameTitlesInGrid}</visible>
       <color>${gamelistGridTitleColor}</color>
       <fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
-      <fontSize>0.024</fontSize>
+      <fontSize>${gridTitleFontSize}</fontSize>
       <singleLineScroll>false</singleLineScroll>
       <alignment>center</alignment>
       <verticalAlignment>top</verticalAlignment>

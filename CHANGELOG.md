@@ -22,6 +22,7 @@
 * Fix the splash screen showing the EmuELEC artwork (and the light color scheme) while the `Distribution` and `Color Scheme` options had never been changed: `splash.xml` did not declare the default value of those options, so every `ifSubset` was true and the last one won. With `None`, the default splash artwork is now used.
 * Bitmap logos now follow the same organization as the vector ones: `_inc/logos/<system>/<scheme>[-<region>].webp`, `<region>.webp` and `<system>-<region>.webp` are supported, with the same precedence rules. The variants of every system that already had them in `_inc/logos-svg/` have been generated with the new `_tools/make_bitmap_logos.py`.
 
+* Adapt the theme to the `Theme Font Scale` setting of EmulationStation: the game list shows fewer rows as the font grows instead of crowding them, the texts laid out in a fixed space stop growing beyond `133%` to avoid overlapping, and the bottom bar stays centered. Add the `Game List Rows` option to force a fixed number of rows (from 8 to 20). The game list panels, which have the row separators baked in, are generated for each number of rows by `_tools/make_gamelist_panels.py`.
 
 
 # 1.0.1 (2025-02-07)

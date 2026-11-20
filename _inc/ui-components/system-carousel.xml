@@ -106,7 +106,7 @@ vertically on the left side of the screen.
       <autoScrollSpeed>25</autoScrollSpeed>
       <autoScrollDelay>0</autoScrollDelay>
       <singleLineScroll>true</singleLineScroll>
-      <fontSize>0.036777777777778</fontSize>
+      <fontSize>${systemNameFontSize}</fontSize>
       <alignment>center</alignment>
       <forceUppercase>true</forceUppercase>
       <color>54585a</color>
@@ -117,7 +117,7 @@ vertically on the left side of the screen.
     <text name="system-manufacturer" extra="true">
       <origin>0.5 0.5</origin>
       <pos>0.25 0.486</pos>
-      <fontSize>0.019</fontSize>
+      <fontSize>${systemManufacturerFontSize}</fontSize>
       <size>${systemHeadersWidthScale} 0.05</size>
       <autoScrollSpeed>25</autoScrollSpeed>
       <autoScrollDelay>0</autoScrollDelay>
@@ -132,7 +132,7 @@ vertically on the left side of the screen.
     <text name="system-year-type" extra="true">
       <origin>0.5 0.5</origin>
       <pos>0.25 0.523</pos>
-      <fontSize>0.024</fontSize>
+      <fontSize>${systemHeaderFontSize}</fontSize>
       <size>${systemHeadersWidthScale} 0.05</size>
       <autoScrollSpeed>25</autoScrollSpeed>
       <autoScrollDelay>0</autoScrollDelay>
@@ -152,7 +152,7 @@ vertically on the left side of the screen.
       <autoScrollSpeed>25</autoScrollSpeed>
       <autoScrollDelay>0</autoScrollDelay>
       <singleLineScroll>true</singleLineScroll>
-      <fontSize>0.024</fontSize>
+      <fontSize>${systemHeaderFontSize}</fontSize>
       <color>${systemInfoSecondaryColor}</color>
       <alignment>center</alignment>
       <lineSpacing>1</lineSpacing>

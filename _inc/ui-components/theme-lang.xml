@@ -15,6 +15,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automatic</i18n.automatic>
     <i18n.color-scheme>Color Scheme</i18n.color-scheme>
     <i18n.gamelist-position>Game List Position</i18n.gamelist-position>
+    <i18n.gamelist-rows>Game List Rows</i18n.gamelist-rows>
     <i18n.left>Left</i18n.left>
     <i18n.right>Right</i18n.right>
     <i18n.light>Light</i18n.light>
@@ -70,6 +71,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>تلقائي</i18n.automatic>
     <i18n.color-scheme>نظام الألوان</i18n.color-scheme>
     <i18n.gamelist-position>موضع قائمة الألعاب</i18n.gamelist-position>
+    <i18n.gamelist-rows>عدد صفوف قائمة الألعاب</i18n.gamelist-rows>
     <i18n.left>يسار</i18n.left>
     <i18n.right>يمين</i18n.right>
     <i18n.light>فاتح</i18n.light>
@@ -122,6 +124,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automatski</i18n.automatic>
     <i18n.color-scheme>Šema boja</i18n.color-scheme>
     <i18n.gamelist-position>Pozicija liste igara</i18n.gamelist-position>
+    <i18n.gamelist-rows>Broj redova liste igara</i18n.gamelist-rows>
     <i18n.left>Lijevo</i18n.left>
     <i18n.right>Desno</i18n.right>
     <i18n.light>Svijetla</i18n.light>
@@ -174,6 +177,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automàtic</i18n.automatic>
     <i18n.color-scheme>Esquema de color</i18n.color-scheme>
     <i18n.gamelist-position>Posició de la llista de jocs</i18n.gamelist-position>
+    <i18n.gamelist-rows>Files de la llista de jocs</i18n.gamelist-rows>
     <i18n.left>Esquerra</i18n.left>
     <i18n.right>Dreta</i18n.right>
     <i18n.light>Clar</i18n.light>
@@ -226,6 +230,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automatisch</i18n.automatic>
     <i18n.color-scheme>Farbschema</i18n.color-scheme>
     <i18n.gamelist-position>Position der Spieleliste</i18n.gamelist-position>
+    <i18n.gamelist-rows>Zeilen der Spieleliste</i18n.gamelist-rows>
     <i18n.left>Links</i18n.left>
     <i18n.right>Rechts</i18n.right>
     <i18n.light>Hell</i18n.light>
@@ -278,6 +283,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automático</i18n.automatic>
     <i18n.color-scheme>Esquema de color</i18n.color-scheme>
     <i18n.gamelist-position>Posición de la lista de juegos</i18n.gamelist-position>
+    <i18n.gamelist-rows>Filas de la lista de juegos</i18n.gamelist-rows>
     <i18n.left>Izquierda</i18n.left>
     <i18n.right>Derecha</i18n.right>
     <i18n.light>Claro</i18n.light>
@@ -330,6 +336,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automatique</i18n.automatic>
     <i18n.color-scheme>Jeu de couleurs</i18n.color-scheme>
     <i18n.gamelist-position>Position de la liste de jeux</i18n.gamelist-position>
+    <i18n.gamelist-rows>Lignes de la liste de jeux</i18n.gamelist-rows>
     <i18n.left>Gauche</i18n.left>
     <i18n.right>Droite</i18n.right>
     <i18n.light>Clair</i18n.light>
@@ -382,6 +389,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automatski</i18n.automatic>
     <i18n.color-scheme>Shema boja</i18n.color-scheme>
     <i18n.gamelist-position>Položaj popisa igara</i18n.gamelist-position>
+    <i18n.gamelist-rows>Broj redaka popisa igara</i18n.gamelist-rows>
     <i18n.left>Lijevo</i18n.left>
     <i18n.right>Desno</i18n.right>
     <i18n.light>Svijetla</i18n.light>
@@ -434,6 +442,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automatico</i18n.automatic>
     <i18n.color-scheme>Schema colore</i18n.color-scheme>
     <i18n.gamelist-position>Posizione dell'elenco giochi</i18n.gamelist-position>
+    <i18n.gamelist-rows>Righe dell'elenco giochi</i18n.gamelist-rows>
     <i18n.left>Sinistra</i18n.left>
     <i18n.right>Destra</i18n.right>
     <i18n.light>Chiaro</i18n.light>
@@ -486,6 +495,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automatisch</i18n.automatic>
     <i18n.color-scheme>Kleurenschema</i18n.color-scheme>
     <i18n.gamelist-position>Positie van de spellijst</i18n.gamelist-position>
+    <i18n.gamelist-rows>Rijen van de spellijst</i18n.gamelist-rows>
     <i18n.left>Links</i18n.left>
     <i18n.right>Rechts</i18n.right>
     <i18n.light>Licht</i18n.light>
@@ -538,6 +548,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>自動</i18n.automatic>
     <i18n.color-scheme>カラースキーム</i18n.color-scheme>
     <i18n.gamelist-position>ゲームリストの位置</i18n.gamelist-position>
+    <i18n.gamelist-rows>ゲームリストの行数</i18n.gamelist-rows>
     <i18n.left>左</i18n.left>
     <i18n.right>右</i18n.right>
     <i18n.light>ライト</i18n.light>
@@ -590,6 +601,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>자동</i18n.automatic>
     <i18n.color-scheme>색 구성표</i18n.color-scheme>
     <i18n.gamelist-position>게임 목록 위치</i18n.gamelist-position>
+    <i18n.gamelist-rows>게임 목록 행 수</i18n.gamelist-rows>
     <i18n.left>왼쪽</i18n.left>
     <i18n.right>오른쪽</i18n.right>
     <i18n.light>밝게</i18n.light>
@@ -642,6 +654,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automatyczny</i18n.automatic>
     <i18n.color-scheme>Schemat kolorów</i18n.color-scheme>
     <i18n.gamelist-position>Pozycja listy gier</i18n.gamelist-position>
+    <i18n.gamelist-rows>Liczba wierszy listy gier</i18n.gamelist-rows>
     <i18n.left>Lewo</i18n.left>
     <i18n.right>Prawo</i18n.right>
     <i18n.light>Jasny</i18n.light>
@@ -694,6 +707,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automático</i18n.automatic>
     <i18n.color-scheme>Esquema de cores</i18n.color-scheme>
     <i18n.gamelist-position>Posição da lista de jogos</i18n.gamelist-position>
+    <i18n.gamelist-rows>Linhas da lista de jogos</i18n.gamelist-rows>
     <i18n.left>Esquerda</i18n.left>
     <i18n.right>Direita</i18n.right>
     <i18n.light>Claro</i18n.light>
@@ -746,6 +760,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automat</i18n.automatic>
     <i18n.color-scheme>Schemă de culori</i18n.color-scheme>
     <i18n.gamelist-position>Poziția listei de jocuri</i18n.gamelist-position>
+    <i18n.gamelist-rows>Rândurile listei de jocuri</i18n.gamelist-rows>
     <i18n.left>Stânga</i18n.left>
     <i18n.right>Dreapta</i18n.right>
     <i18n.light>Deschis</i18n.light>
@@ -798,6 +813,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Автоматически</i18n.automatic>
     <i18n.color-scheme>Цветовая схема</i18n.color-scheme>
     <i18n.gamelist-position>Положение списка игр</i18n.gamelist-position>
+    <i18n.gamelist-rows>Строки списка игр</i18n.gamelist-rows>
     <i18n.left>Слева</i18n.left>
     <i18n.right>Справа</i18n.right>
     <i18n.light>Светлая</i18n.light>
@@ -850,6 +866,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Аутоматски</i18n.automatic>
     <i18n.color-scheme>Шема боја</i18n.color-scheme>
     <i18n.gamelist-position>Положај листе игара</i18n.gamelist-position>
+    <i18n.gamelist-rows>Број редова листе игара</i18n.gamelist-rows>
     <i18n.left>Лево</i18n.left>
     <i18n.right>Десно</i18n.right>
     <i18n.light>Светла</i18n.light>
@@ -902,6 +919,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automatisk</i18n.automatic>
     <i18n.color-scheme>Färgschema</i18n.color-scheme>
     <i18n.gamelist-position>Spellistans position</i18n.gamelist-position>
+    <i18n.gamelist-rows>Rader i spellistan</i18n.gamelist-rows>
     <i18n.left>Vänster</i18n.left>
     <i18n.right>Höger</i18n.right>
     <i18n.light>Ljus</i18n.light>
@@ -954,6 +972,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>自动</i18n.automatic>
     <i18n.color-scheme>配色方案</i18n.color-scheme>
     <i18n.gamelist-position>游戏列表位置</i18n.gamelist-position>
+    <i18n.gamelist-rows>游戏列表行数</i18n.gamelist-rows>
     <i18n.left>左</i18n.left>
     <i18n.right>右</i18n.right>
     <i18n.light>浅色</i18n.light>
@@ -1006,6 +1025,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automatikoa</i18n.automatic>
     <i18n.color-scheme>Kolore-eskema</i18n.color-scheme>
     <i18n.gamelist-position>Joko-zerrendaren kokalekua</i18n.gamelist-position>
+    <i18n.gamelist-rows>Joko-zerrendako errenkadak</i18n.gamelist-rows>
     <i18n.left>Ezkerra</i18n.left>
     <i18n.right>Eskuina</i18n.right>
     <i18n.light>Argia</i18n.light>
@@ -1058,6 +1078,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automático</i18n.automatic>
     <i18n.color-scheme>Esquema de cor</i18n.color-scheme>
     <i18n.gamelist-position>Posición da lista de xogos</i18n.gamelist-position>
+    <i18n.gamelist-rows>Filas da lista de xogos</i18n.gamelist-rows>
     <i18n.left>Esquerda</i18n.left>
     <i18n.right>Dereita</i18n.right>
     <i18n.light>Claro</i18n.light>
@@ -1110,6 +1131,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automaticky</i18n.automatic>
     <i18n.color-scheme>Barevné schéma</i18n.color-scheme>
     <i18n.gamelist-position>Pozice seznamu her</i18n.gamelist-position>
+    <i18n.gamelist-rows>Počet řádků seznamu her</i18n.gamelist-rows>
     <i18n.left>Vlevo</i18n.left>
     <i18n.right>Vpravo</i18n.right>
     <i18n.light>Světlé</i18n.light>
@@ -1162,6 +1184,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automaticky</i18n.automatic>
     <i18n.color-scheme>Farebná schéma</i18n.color-scheme>
     <i18n.gamelist-position>Pozícia zoznamu hier</i18n.gamelist-position>
+    <i18n.gamelist-rows>Počet riadkov zoznamu hier</i18n.gamelist-rows>
     <i18n.left>Vľavo</i18n.left>
     <i18n.right>Vpravo</i18n.right>
     <i18n.light>Svetlá</i18n.light>
@@ -1214,6 +1237,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automatikus</i18n.automatic>
     <i18n.color-scheme>Színséma</i18n.color-scheme>
     <i18n.gamelist-position>Játéklista pozíciója</i18n.gamelist-position>
+    <i18n.gamelist-rows>Játéklista sorainak száma</i18n.gamelist-rows>
     <i18n.left>Bal</i18n.left>
     <i18n.right>Jobb</i18n.right>
     <i18n.light>Világos</i18n.light>
@@ -1266,6 +1290,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Αυτόματο</i18n.automatic>
     <i18n.color-scheme>Χρωματικό σχήμα</i18n.color-scheme>
     <i18n.gamelist-position>Θέση λίστας παιχνιδιών</i18n.gamelist-position>
+    <i18n.gamelist-rows>Γραμμές λίστας παιχνιδιών</i18n.gamelist-rows>
     <i18n.left>Αριστερά</i18n.left>
     <i18n.right>Δεξιά</i18n.right>
     <i18n.light>Φωτεινό</i18n.light>
@@ -1318,6 +1343,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automaattinen</i18n.automatic>
     <i18n.color-scheme>Värimalli</i18n.color-scheme>
     <i18n.gamelist-position>Pelilistan sijainti</i18n.gamelist-position>
+    <i18n.gamelist-rows>Pelilistan rivit</i18n.gamelist-rows>
     <i18n.left>Vasen</i18n.left>
     <i18n.right>Oikea</i18n.right>
     <i18n.light>Vaalea</i18n.light>
@@ -1370,6 +1396,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Automatisk</i18n.automatic>
     <i18n.color-scheme>Fargevalg</i18n.color-scheme>
     <i18n.gamelist-position>Plassering av spillisten</i18n.gamelist-position>
+    <i18n.gamelist-rows>Rader i spillisten</i18n.gamelist-rows>
     <i18n.left>Venstre</i18n.left>
     <i18n.right>Høyre</i18n.right>
     <i18n.light>Lys</i18n.light>
@@ -1422,6 +1449,7 @@ defined in "theme-config.xml". Therefore, it must be included before any other o
     <i18n.automatic>Автоматично</i18n.automatic>
     <i18n.color-scheme>Кольорова схема</i18n.color-scheme>
     <i18n.gamelist-position>Розташування списку ігор</i18n.gamelist-position>
+    <i18n.gamelist-rows>Рядки списку ігор</i18n.gamelist-rows>
     <i18n.left>Ліворуч</i18n.left>
     <i18n.right>Праворуч</i18n.right>
     <i18n.light>Світла</i18n.light>
