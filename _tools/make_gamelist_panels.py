@@ -23,7 +23,8 @@ OTHER = Path(__file__).parent.parent / "_inc" / "other"
 OUTPUT = OTHER / "gamelist-rows"
 WIDTH, HEIGHT = 1920, 1080
 SCHEMES = ("dark", "light")
-GAMELIST_ROWS = (8, 9, 10, 11, 12, 13, 14, 15, 18, 20)
+# Odd numbers only: the text list centers the selected row, so even numbers would show half rows.
+GAMELIST_ROWS = (7, 9, 11, 13, 15, 17, 19, 21)
 
 # Geometry of the "gamelist" text list, in pixels of the 1920x1080 panel.
 LIST_TOP = 0.09 * HEIGHT

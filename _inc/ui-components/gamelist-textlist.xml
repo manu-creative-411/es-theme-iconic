@@ -3,6 +3,17 @@
 It displays a list of the games of the system being viewed. Its number of rows and font size depend on
 the "Game List Rows" option and on the font scale (see "theme-variables.xml"). The panel image has the
 row separators baked in, so there is one per number of rows.
+
+Each row is drawn by an item template (instead of the built-in rendering of the text list) to handle long
+titles, which the built-in rendering simply cuts at the right edge of the list:
+  - unselected rows: the title is shortened with an ellipsis ("...") to fit the row;
+  - selected row: the title scrolls horizontally (marquee), clipped to the same margins.
+The selection state is applied by the "activate" and "deactivate" storyboards, played by the text list
+when the cursor moves. Switching "autoScroll" from "none" to "horizontal" also restarts the marquee
+from the beginning, after its delay. The template keeps the geometry of the built-in rendering: the
+selector fills the row, and the title has the same horizontal margin (0.008333 of the screen width,
+i.e. 0.023 of the list width) on both sides. Entries without game data (such as the ". ." parent folder)
+have no template and fall back to the built-in rendering, which uses the same colors.
 -->
 <theme>
   <formatVersion>7</formatVersion>
@@ -30,6 +41,42 @@ row separators baked in, so there is one per number of rows.
       <lines>${gamelistRows}</lines>
       <alignment>left</alignment>
       <scrollSound>./_inc/sounds/scroll.wav</scrollSound>
+      <itemTemplate>
+        <!-- Rectangles ignore "opacity": the selector is hidden with a fully transparent color instead. -->
+        <rectangle name="gamelist-row-selector">
+          <pos>0 0</pos>
+          <size>1 1</size>
+          <color>${gamelistSelectorColor}00</color>
+          <storyboard event="activate">
+            <animation property="color" to="${gamelistSelectorColor}FF" duration="0"/>
+          </storyboard>
+          <storyboard event="deactivate">
+            <animation property="color" to="${gamelistSelectorColor}00" duration="0"/>
+          </storyboard>
+        </rectangle>
+        <text name="gamelist-row-title">
+          <text>{game:fullName}</text>
+          <pos>0.023 0</pos>
+          <size>0.954 1</size>
+          <fontPath>./_inc/fonts/Gilroy-Bold.ttf</fontPath>
+          <fontSize>${gamelistFontSize}</fontSize>
+          <color>${gamelistPrimaryColor}</color>
+          <alignment>left</alignment>
+          <verticalAlignment>center</verticalAlignment>
+          <multiLine>false</multiLine>
+          <autoScroll>none</autoScroll>
+          <autoScrollDelay>1500</autoScrollDelay>
+          <autoScrollSpeed>50</autoScrollSpeed>
+          <storyboard event="activate">
+            <animation property="color" to="${gamelistSelectedColor}" duration="0"/>
+            <animation property="autoScroll" to="horizontal" duration="0"/>
+          </storyboard>
+          <storyboard event="deactivate">
+            <animation property="color" to="${gamelistPrimaryColor}" duration="0"/>
+            <animation property="autoScroll" to="none" duration="0"/>
+          </storyboard>
+        </text>
+      </itemTemplate>
 
     </textlist>
   </view>

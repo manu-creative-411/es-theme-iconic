@@ -36,8 +36,11 @@ here are then used by the UI components to adjust the appearance of the theme.
   <!-- Config: Game List Rows.
 
     The game list has a fixed number of rows ("lines"), so a bigger font only makes the text crowd the
-    rows. Instead, the number of rows is reduced when the font scale grows ("Automatic": about 15 rows
-    divided by the scale, rounded to one of the values below), or fixed by the user.
+    rows. Instead, the number of rows is reduced when the font scale grows ("Automatic": 15 rows divided
+    by the scale, rounded to the nearest odd number, ties going to the smaller one), or fixed by the user.
+
+    Only odd numbers are used: the text list keeps the selected row centered, so with an even number of
+    rows the list is offset by half a row, and the first and last rows are cut in half.
 
     The font size is then derived from the number of rows, compensating the font scale applied by
     EmulationStation: the text always fills its row in the same proportion as the original design
@@ -47,27 +50,27 @@ here are then used by the UI components to adjust the appearance of the theme.
     Each value needs its own panel image (the separators are part of it), generated in
     "_inc/other/gamelist-rows/<rows>/" by "_tools/make_gamelist_panels.py".
   -->
-  <variables ifSubset="gamelist-rows:auto">
-    <gamelistRows>20</gamelistRows>
-    <gamelistRows if="${esFontScale} &gt;= 0.875">15</gamelistRows>
-    <gamelistRows if="${esFontScale} &gt;= 1.05">14</gamelistRows>
-    <gamelistRows if="${esFontScale} &gt;= 1.175">12</gamelistRows>
-    <gamelistRows if="${esFontScale} &gt;= 1.28">11</gamelistRows>
-    <gamelistRows if="${esFontScale} &gt;= 1.4">10</gamelistRows>
-    <gamelistRows if="${esFontScale} &gt;= 1.625">9</gamelistRows>
-    <gamelistRows if="${esFontScale} &gt;= 1.875">8</gamelistRows>
+  <!-- The automatic value is always computed first, and the fixed values override it: an unknown value
+    (such as a removed one still saved in the settings) behaves as "Automatic". -->
+  <variables>
+    <gamelistRows>21</gamelistRows>
+    <gamelistRows if="${esFontScale} &gt;= 0.75">19</gamelistRows>
+    <gamelistRows if="${esFontScale} &gt;= 0.8333">17</gamelistRows>
+    <gamelistRows if="${esFontScale} &gt;= 0.9375">15</gamelistRows>
+    <gamelistRows if="${esFontScale} &gt;= 1.0714">13</gamelistRows>
+    <gamelistRows if="${esFontScale} &gt;= 1.25">11</gamelistRows>
+    <gamelistRows if="${esFontScale} &gt;= 1.5">9</gamelistRows>
+    <gamelistRows if="${esFontScale} &gt;= 1.875">7</gamelistRows>
   </variables>
   <variables>
-    <gamelistRows ifSubset="gamelist-rows:20">20</gamelistRows>
-    <gamelistRows ifSubset="gamelist-rows:18">18</gamelistRows>
+    <gamelistRows ifSubset="gamelist-rows:21">21</gamelistRows>
+    <gamelistRows ifSubset="gamelist-rows:19">19</gamelistRows>
+    <gamelistRows ifSubset="gamelist-rows:17">17</gamelistRows>
     <gamelistRows ifSubset="gamelist-rows:15">15</gamelistRows>
-    <gamelistRows ifSubset="gamelist-rows:14">14</gamelistRows>
     <gamelistRows ifSubset="gamelist-rows:13">13</gamelistRows>
-    <gamelistRows ifSubset="gamelist-rows:12">12</gamelistRows>
     <gamelistRows ifSubset="gamelist-rows:11">11</gamelistRows>
-    <gamelistRows ifSubset="gamelist-rows:10">10</gamelistRows>
     <gamelistRows ifSubset="gamelist-rows:9">9</gamelistRows>
-    <gamelistRows ifSubset="gamelist-rows:8">8</gamelistRows>
+    <gamelistRows ifSubset="gamelist-rows:7">7</gamelistRows>
   </variables>
   <variables>
     <gamelistFontSize>0.030333333333333 * 15 / ${gamelistRows} / ${esFontScale}</gamelistFontSize>
